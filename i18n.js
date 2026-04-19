@@ -878,9 +878,8 @@ function applyTranslations(lang) {
   });
 
   // Update language switcher active state
-  document.querySelectorAll('.lang-btn').forEach(function(btn) {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
+  const langSelect = document.getElementById('lang-select');
+  if (langSelect) langSelect.value = lang;
 
   // Update page title
   const titles = {
@@ -906,10 +905,11 @@ function initI18n() {
   const lang = getCurrentLang();
   setLang(lang);
 
-  // Bind language switcher buttons
-  document.querySelectorAll('.lang-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      setLang(this.dataset.lang);
+  // Bind language select
+  const langSelect = document.getElementById('lang-select');
+  if (langSelect) {
+    langSelect.addEventListener('change', function() {
+      setLang(this.value);
     });
-  });
+  }
 }
