@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桃源郷岬 再生プラン — 全提案まとめ</title>
+<style>
+  :root {
+    --primary: #2d6a4f;
+    --primary-light: #40916c;
+    --accent: #e76f51;
+    --accent2: #f4a261;
+    --blue: #264653;
+    --blue-light: #2a9d8f;
+    --bg: #fefae0;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --gray-light: #e9ecef;
+    --danger: #e63946;
+    --success: #2d6a4f;
+    --rain: #5e9cc7;
+    --rain-light: #e3f0fa;
+    --purple: #7B2D8E;
+    --purple-light: #f3e8f9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Slide system */
+  .slide {
+    min-height: 100vh;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    page-break-after: always;
+  }
+
+  @media print {
+    .slide { min-height: auto; padding: 30px 20px; }
+    .nav { display: none; }
+  }
+
+  /* Typography */
+  h1 { font-size: 2.4rem; margin-bottom: 12px; }
+  h2 { font-size: 1.7rem; margin-bottom: 20px; color: var(--blue); border-left: 5px solid var(--accent); padding-left: 16px; }
+  h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary); }
+  .subtitle { font-size: 1rem; color: var(--gray); margin-bottom: 30px; }
+  .highlight { color: var(--accent); font-weight: 700; }
+  .big-number { font-size: 2.8rem; font-weight: 800; line-height: 1; }
+  .label { font-size: 0.82rem; color: var(--gray); margin-top: 4px; }
+
+  /* Nav */
+  .nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--blue);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Cover */
+  .cover {
+    text-align: center;
+    background: linear-gradient(135deg, #2d6a4f 0%, #264653 50%, #1d3557 100%);
+    color: white;
+    align-items: center;
+  }
+  .cover h1 { font-size: 3rem; border: none; color: white; }
+  .cover .subtitle { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+  .cover .flower-icons { font-size: 2rem; margin: 30px 0; letter-spacing: 12px; }
+  .cover .target-badge {
+    display: inline-block;
+    background: var(--accent);
+    padding: 8px 24px;
+    border-radius: 24px;
+    font-weight: 700;
+    margin: 6px;
+    font-size: 0.95rem;
+  }
+
+  /* Comparison bars */
+  .compare-row {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    gap: 12px;
+  }
+  .compare-label {
+    width: 160px;
+    font-size: 0.88rem;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .compare-bar-wrap {
+    flex: 1;
+    background: var(--gray-light);
+    border-radius: 8px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .compare-bar {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .compare-bar.green { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+  .compare-bar.orange { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  .compare-bar.blue { background: linear-gradient(90deg, var(--blue), var(--blue-light)); }
+  .compare-bar.gray { background: var(--gray); }
+
+  /* Grid cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--primary);
+  }
+  .card.accent { border-top-color: var(--accent); }
+  .card.blue { border-top-color: var(--blue-light); }
+  .card.rain { border-top-color: var(--rain); }
+  .card.purple { border-top-color: var(--purple); }
+  .card-icon { font-size: 1.8rem; margin-bottom: 6px; }
+  .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+  .card-desc { font-size: 0.85rem; color: var(--gray); }
+  .card-price { font-size: 0.82rem; color: var(--success); font-weight: 600; margin-top: 6px; }
+
+  /* Flow diagram */
+  .flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .flow-box {
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 14px 18px;
+    text-align: center;
+    font-weight: 700;
+    min-width: 130px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+  }
+  .flow-box.problem { border-color: var(--danger); color: var(--danger); }
+  .flow-box.cause { border-color: var(--accent); color: var(--accent); background: #fff5f0; }
+  .flow-arrow { font-size: 1.5rem; color: var(--gray); }
+
+  /* Calendar */
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3px;
+    margin: 16px 0;
+  }
+  .cal-cell {
+    border-radius: 8px;
+    padding: 8px 3px;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+  .cal-cell.paid { background: var(--success); color: white; }
+  .cal-cell.main { background: var(--accent); color: white; }
+  .cal-cell.free { background: var(--gray-light); color: var(--gray); }
+  .cal-cell.proposed { background: var(--blue-light); color: white; }
+  .cal-month { font-size: 0.8rem; font-weight: 700; }
+
+  .calendar-legend {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 0.82rem;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  /* Priority table */
+  .ptable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.88rem;
+  }
+  .ptable th {
+    background: var(--blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+  }
+  .ptable td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .ptable tr:nth-child(even) td { background: #f8f9fa; }
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+  }
+  .badge.s { background: var(--danger); }
+  .badge.a { background: var(--accent); }
+  .badge.b { background: var(--blue-light); }
+  .badge.zero { background: var(--success); }
+  .badge.rain { background: var(--rain); }
+
+  /* Simulation */
+  .sim-container {
+    display: flex;
+    gap: 20px;
+    margin: 16px 0;
+    align-items: stretch;
+  }
+  .sim-box {
+    flex: 1;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .sim-box.before { border-top: 5px solid var(--danger); }
+  .sim-box.after { border-top: 5px solid var(--success); }
+  .sim-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 14px; }
+  .sim-bar-wrap { margin: 6px 0; }
+  .sim-bar-label { font-size: 0.8rem; color: var(--gray); margin-bottom: 3px; }
+  .sim-bar-outer {
+    background: var(--gray-light);
+    border-radius: 6px;
+    height: 26px;
+    overflow: hidden;
+  }
+  .sim-bar-inner {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: white;
+  }
+  .sim-result {
+    margin-top: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .sim-result.red { background: #ffe5e5; color: var(--danger); }
+  .sim-result.green { background: #e8f5e9; color: var(--success); }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 36px;
+    margin: 16px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--primary);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary);
+  }
+  .tl-period { font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+  .tl-list { list-style: none; }
+  .tl-list li { padding: 2px 0; font-size: 0.88rem; }
+  .tl-list li::before { content: '✅ '; }
+
+  /* Role section */
+  .role-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .role-box {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .role-box.itoko { border-left: 5px solid var(--blue); }
+  .role-box.family { border-left: 5px solid var(--accent); }
+  .role-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
+  .role-list { list-style: none; }
+  .role-list li { padding: 5px 0; border-bottom: 1px dashed var(--gray-light); font-size: 0.88rem; }
+
+  /* Closing */
+  .closing {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--blue) 100%);
+    color: white;
+    align-items: center;
+  }
+  .closing h2 { color: white; border: none; }
+  .closing .subtitle { color: rgba(255,255,255,0.8); }
+  .closing-box {
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 28px;
+    margin: 16px 0;
+    max-width: 700px;
+  }
+  .closing-quote {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    font-weight: 600;
+  }
+
+  /* Ema section */
+  .ema-section {
+    background: linear-gradient(135deg, #f0fff4, #e8f5e9);
+    border-radius: 14px;
+    padding: 24px;
+    margin: 16px 0;
+  }
+  .ema-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .ema-step {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .ema-step-num {
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 8px;
+    font-size: 0.9rem;
+  }
+  .ema-catch {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin: 16px 0;
+    padding: 14px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid var(--blue-light);
+  }
+
+  /* Turtle section */
+  .turtle-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .turtle-box {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--primary);
+  }
+  .turtle-box .tb-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .turtle-box .tb-desc {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .turtle-box .tb-price {
+    font-size: 0.82rem;
+    color: var(--success);
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  /* Rain section */
+  .rain-section {
+    background: linear-gradient(135deg, var(--rain-light), #d4eaf7);
+    border-radius: 14px;
+    padding: 24px;
+    margin: 16px 0;
+  }
+
+  /* Alert box */
+  .alert-box {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 0.9rem;
+  }
+  .alert-box .alert-title {
+    font-weight: 700;
+    color: #856404;
+    margin-bottom: 6px;
+  }
+  .alert-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .alert-box li { padding: 3px 0; font-size: 0.88rem; }
+  .alert-box li::before { content: '⚠️ '; }
+
+  /* Section divider */
+  .section-tag {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  /* Menu table */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .menu-item {
+    background: white;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    font-size: 0.85rem;
+  }
+  .menu-item .mi-icon { font-size: 1.5rem; margin-bottom: 4px; }
+  .menu-item .mi-name { font-weight: 700; font-size: 0.9rem; }
+  .menu-item .mi-cost { color: var(--gray); font-size: 0.8rem; margin-top: 2px; }
+  .menu-item .mi-price { color: var(--success); font-weight: 600; font-size: 0.82rem; margin-top: 2px; }
+  .menu-item .mi-tag {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 4px;
+  }
+  .menu-item .mi-tag.t-zero { background: var(--success); }
+  .menu-item .mi-tag.t-low { background: var(--blue-light); }
+  .menu-item .mi-tag.t-mid { background: var(--accent); }
+  .menu-item .mi-tag.t-event { background: var(--purple); }
+
+  @media (max-width: 768px) {
+    .slide { padding: 30px 20px; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.3rem; }
+    .cover h1 { font-size: 2rem; }
+    .calendar { grid-template-columns: repeat(6, 1fr); }
+    .sim-container { flex-direction: column; }
+    .role-grid { grid-template-columns: 1fr; }
+    .turtle-layout { grid-template-columns: 1fr; }
+    .ema-flow { flex-direction: column; }
+    .compare-label { width: 100px; font-size: 0.8rem; }
+    .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== SLIDE 1: COVER ===== -->
+<div class="slide cover">
+  <div class="flower-icons">🌸 🌺 🍁 🌧️ 🐢</div>
+  <h1>桃源郷岬 再生プラン</h1>
+  <p class="subtitle">宮崎県門川町・桃源郷岬 黒字化に向けた全提案</p>
+  <div>
+    <span class="target-badge">🌸 春：桜＋桃の花</span>
+    <span class="target-badge">🌺 夏：アジサイ</span>
+    <span class="target-badge">🍁 秋：モミジ紅葉</span>
+    <span class="target-badge">🌧️ 雨：雨の日限定体験</span>
+  </div>
+  <p style="margin-top: 30px; font-size: 1rem; opacity: 0.9;">
+    結論：コンテンツは日本トップクラス。<br>足りないのは「知られること」だけ。
+  </p>
+  <p style="margin-top: 16px; font-size: 0.85rem; opacity: 0.7;">
+    ※この資料は提案の「メニュー」です。全部やる必要はありません。<br>
+    やるべきものを選んで、一つずつ実施してください。
+  </p>
+</div>
+
+<!-- ===== SLIDE 2: STRENGTHS ===== -->
+<div class="slide">
+  <h2>桃源郷岬が持っている「強み」</h2>
+  <p class="subtitle">競合と比較すれば、その凄さがわかる</p>
+
+  <h3>アジサイの規模比較</h3>
+  <div class="compare-row">
+    <div class="compare-label">桃源郷岬</div>
+    <div class="compare-bar-wrap">
+      <div class="compare-bar green" style="width: 100%;">日本有数の規模（80種）</div>
+    </div>
+  </div>
+  <div class="compare-row">
+    <div class="compare-label">みちのくあじさい園</div>
+    <div class="compare-bar-wrap">
+      <div class="compare-bar gray" style="width: 1.5%;">3万本</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 20px;">桜の品種数比較</h3>
+  <div class="compare-row">
+    <div class="compare-label">桃源郷岬</div>
+    <div class="compare-bar-wrap">
+      <div class="compare-bar orange" style="width: 100%;">数十種類の桜が咲き誇る</div>
+    </div>
+  </div>
+  <div class="compare-row">
+    <div class="compare-label">一般的な桜名所</div>
+    <div class="compare-bar-wrap">
+      <div class="compare-bar gray" style="width: 8%;">3〜10種</div>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-top: 20px;">
+    <div class="card">
+      <div class="card-icon">🌊</div>
+      <div class="card-title">海×花のコラボ</div>
+      <div class="card-desc">岬の上から太平洋を見下ろす。全国でも稀。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌅</div>
+      <div class="card-title">朝日・夕日</div>
+      <div class="card-desc">通年で楽しめる絶景。花が咲いていなくても映える。</div>
+    </div>
+    <div class="card blue">
+      <div class="card-icon">🦅</div>
+      <div class="card-title">カンムリウミスズメ</div>
+      <div class="card-desc">世界最大の繁殖地が目の前。国際的な価値。</div>
+    </div>
+    <div class="card accent">
+      <div class="card-icon">🐢</div>
+      <div class="card-title">亀岩</div>
+      <div class="card-desc">自然が作った亀の形の岩。パワースポット化可能。</div>
+    </div>
+  </div>
+
+  <div class="alert-box">
+    <div class="alert-title">📌 確認が必要なこと</div>
+    <ul>
+      <li><strong>アジサイの本数・種類数</strong>（推定か実数か）を確認すること</li>
+      <li><strong>桜の品種数</strong>、<strong>モミジの本数</strong>も同様</li>
+      <li>メディアに伝える数字の根拠として重要。不正確だと信用を失う</li>
+      <li>確定するまで「日本有数の規模」等の控えめな表現を使うこと</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== SLIDE 3: THE REAL PROBLEM ===== -->
+<div class="slide">
+  <h2>赤字の本当の理由</h2>
+  <p class="subtitle">「コンテンツ不足」ではない。「知られていない」だけ。</p>
+
+  <div class="flow">
+    <div class="flow-box problem">年間<br>300〜500万円<br>の赤字</div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-box cause">来場者数が<br>損益分岐点に届かない</div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-box cause">花の見ごろ期間しか<br>入場料を取っていない</div>
+    <div class="flow-arrow">←</div>
+    <div class="flow-box cause">SNS・メディア<br>での発信が弱い</div>
+  </div>
+
+  <div style="text-align: center; margin: 16px 0;">
+    <div style="background: white; border-radius: 12px; padding: 16px; display: inline-block; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+      <div style="font-size: 1rem; font-weight: 700; color: var(--danger);">
+        花はもういらない。あるものに値段を付けるだけ。
+      </div>
+    </div>
+  </div>
+
+  <h3>入場料を取れる期間【現状】</h3>
+  <div class="calendar">
+    <div class="cal-cell free"><div class="cal-month">1月</div>—</div>
+    <div class="cal-cell free"><div class="cal-month">2月</div>—</div>
+    <div class="cal-cell paid"><div class="cal-month">3月</div>🌸桃<br>500円</div>
+    <div class="cal-cell paid"><div class="cal-month">4月</div>🌸桃<br>500円</div>
+    <div class="cal-cell free"><div class="cal-month">5月</div>—</div>
+    <div class="cal-cell main"><div class="cal-month">6月</div>🌺アジサイ<br>1,000円</div>
+    <div class="cal-cell main"><div class="cal-month">7月</div>🌺アジサイ<br>700円</div>
+    <div class="cal-cell free"><div class="cal-month">8月</div>—</div>
+    <div class="cal-cell free"><div class="cal-month">9月</div>—</div>
+    <div class="cal-cell free"><div class="cal-month">10月</div>—</div>
+    <div class="cal-cell free"><div class="cal-month">11月</div>—</div>
+    <div class="cal-cell free"><div class="cal-month">12月</div>—</div>
+  </div>
+  <div class="calendar-legend">
+    <span><span class="legend-dot" style="background: var(--accent);"></span>メイン（アジサイ）</span>
+    <span><span class="legend-dot" style="background: var(--success);"></span>入場料あり（桃）</span>
+    <span><span class="legend-dot" style="background: var(--gray-light);"></span>無料（実質0円）</span>
+  </div>
+</div>
+
+<!-- ===== SLIDE 4: CALENDAR PROPOSED ===== -->
+<div class="slide">
+  <h2>提案：見ごろ期間のみ入場料を取る</h2>
+  <p class="subtitle">花がない時期は無料のまま。花がある時にだけ有料にする。</p>
+
+  <div class="calendar">
+    <div class="cal-cell free"><div class="cal-month">1月</div>—<br>無料</div>
+    <div class="cal-cell free"><div class="cal-month">2月</div>—<br>無料</div>
+    <div class="cal-cell proposed"><div class="cal-month">3月</div>🌸桜＋桃<br>700円</div>
+    <div class="cal-cell proposed"><div class="cal-month">4月</div>🌸桜＋桃<br>＋ツツジ 700円</div>
+    <div class="cal-cell free"><div class="cal-month">5月</div>—<br>無料</div>
+    <div class="cal-cell main"><div class="cal-month">6月</div>🌺アジサイ<br>1,000円</div>
+    <div class="cal-cell main"><div class="cal-month">7月</div>🌺アジサイ<br>700円</div>
+    <div class="cal-cell free"><div class="cal-month">8月</div>—<br>無料</div>
+    <div class="cal-cell free"><div class="cal-month">9月</div>—<br>無料</div>
+    <div class="cal-cell free"><div class="cal-month">10月</div>—<br>無料</div>
+    <div class="cal-cell proposed"><div class="cal-month">11月</div>🍁紅葉<br>700円</div>
+    <div class="cal-cell free"><div class="cal-month">12月</div>—<br>無料</div>
+  </div>
+  <div class="calendar-legend">
+    <span><span class="legend-dot" style="background: var(--accent);"></span>メイン（アジサイ）</span>
+    <span><span class="legend-dot" style="background: var(--blue-light);"></span>提案：新たに入場料を取る期間</span>
+    <span><span class="legend-dot" style="background: var(--gray-light);"></span>無料開放（体験のみ楽しめる）</span>
+  </div>
+
+  <div class="alert-box" style="background: #e8f5e9; border-color: var(--success);">
+    <div class="alert-title" style="color: var(--success);">💡 花がない時期は無料にする理由</div>
+    <ul style="list-style: none; padding: 0;">
+      <li style="font-size: 0.88rem;">✅ 「700円払ったのに花が咲いてない」というクレームを防ぐ</li>
+      <li style="font-size: 0.88rem;">✅ 無料期間でも海風絵馬・亀岩等の体験収入はある</li>
+      <li style="font-size: 0.88rem;">✅ 無料で来た人が「次は花の季節に来よう」と思う＝リピーター創出</li>
+    </ul>
+  </div>
+
+  <div style="text-align: center; margin-top: 12px;">
+    <strong>入場料を取れる期間：3〜4カ月 → 5〜6カ月に拡大</strong>
+  </div>
+</div>
+
+<!-- ===== SLIDE 5: PHASE 1 ===== -->
+<div class="slide">
+  <span class="section-tag">まずはここから</span>
+  <h2>フェーズ1 — 最初の3ヶ月でやること（8つ）</h2>
+  <p class="subtitle">コスト合計14万円。軌道に乗ってから追加する。</p>
+
+  <table class="ptable">
+    <thead>
+      <tr>
+        <th style="width: 40px;">No.</th>
+        <th>やること</th>
+        <th style="width: 90px;">コスト</th>
+        <th style="width: 80px;">効果</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>花の数字を確認する</strong><br><span style="font-size:0.8rem; color: var(--gray);">本数・品種数・来場者数</span></td>
+        <td><span class="badge zero">0円</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>花の見ごろ期間のみ入場料徴収</strong><br><span style="font-size:0.8rem; color: var(--gray);">春（桜＋桃）と秋（紅葉）を追加</span></td>
+        <td><span class="badge zero">0円</span></td>
+        <td><strong>+200万</strong></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>セルフ投入箱＋QR決済</strong><br><span style="font-size:0.8rem; color: var(--gray);">現金メイン・QR補助。回収型ボックス</span></td>
+        <td>2万</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Googleマップ完全整備</strong><br><span style="font-size:0.8rem; color: var(--gray);">写真50枚UP・営業時間・アクセス登録</span></td>
+        <td><span class="badge zero">0円</span></td>
+        <td><strong>+50万</strong></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>入口の花トンネル</strong><br><span style="font-size:0.8rem; color: var(--gray);">竹＋季節の花でDIY。「桃源郷の入り口」</span></td>
+        <td>2万</td>
+        <td>間接</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>絶景ベンチ3脚</strong><br><span style="font-size:0.8rem; color: var(--gray);">崖から離れた安全位置。「3分座って海を見て」</span></td>
+        <td>3万</td>
+        <td>間接</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>海風絵馬の設置</strong><br><span style="font-size:0.8rem; color: var(--gray);">桃源郷岬の名物体験。通年収入源</span></td>
+        <td>2万</td>
+        <td><strong>+36万</strong></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>道路案内看板3カ所</strong><br><span style="font-size:0.8rem; color: var(--gray);">国道10号からの追従案内</span></td>
+        <td>5万</td>
+        <td><strong>+30万</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="text-align: center; margin-top: 12px; font-size: 0.9rem;">
+    <strong>フェーズ1の効果：追加収入 約+316万円 / コスト 14万円</strong>
+  </div>
+</div>
+
+<!-- ===== SLIDE 6: SEA BREEZE EMA ===== -->
+<div class="slide">
+  <span class="section-tag">フェーズ1の核</span>
+  <h2>海風絵馬 — 桃源郷岬の名物体験</h2>
+  <p class="subtitle">コスト最少・効果最大。まずはこれ一つから。</p>
+
+  <div class="ema-section">
+    <div class="ema-catch">
+      鵜戸神宮は岩に投げる。<br>桃源郷岬は風に願う。
+    </div>
+
+    <div class="ema-flow">
+      <div class="ema-step">
+        <div class="ema-step-num">1</div>
+        <div style="font-size: 1.8rem; margin-bottom: 4px;">📝</div>
+        <div style="font-weight: 700; font-size: 0.9rem;">絵馬を買う</div>
+        <div style="font-size: 0.82rem; color: var(--gray);">波・亀の形 300円</div>
+      </div>
+      <div class="ema-step">
+        <div class="ema-step-num">2</div>
+        <div style="font-size: 1.8rem; margin-bottom: 4px;">✍️</div>
+        <div style="font-weight: 700; font-size: 0.9rem;">願いを書く</div>
+        <div style="font-size: 0.82rem; color: var(--gray);">名前・日付も</div>
+      </div>
+      <div class="ema-step">
+        <div class="ema-step-num">3</div>
+        <div style="font-size: 1.8rem; margin-bottom: 4px;">🌊</div>
+        <div style="font-weight: 700; font-size: 0.9rem;">海風に掛ける</div>
+        <div style="font-size: 0.82rem; color: var(--gray);">風が願いを海へ</div>
+      </div>
+      <div class="ema-step">
+        <div class="ema-step-num">4</div>
+        <div style="font-size: 1.8rem; margin-bottom: 4px;">📸</div>
+        <div style="font-weight: 700; font-size: 0.9rem;">写真を撮る</div>
+        <div style="font-size: 0.82rem; color: var(--gray);">SNSにUP→拡散</div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">💰 収益性</div>
+        <div class="card-desc">月100枚×300円＝<strong>年間36万円</strong><br>初期コストは2万円のみ</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🔄 自己増殖</div>
+        <div class="card-desc">絵馬が増える→映える→人が来る→さらに増える</div>
+      </div>
+      <div class="card">
+        <div class="card-title">📅 通年対応</div>
+        <div class="card-desc">花の有無に関係ない。オフシーズンの収入源</div>
+      </div>
+      <div class="card">
+        <div class="card-title">🛠️ 手間ほぼゼロ</div>
+        <div class="card-desc">絵馬とペンを置くだけ。月1回補充（10分）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 7: TURTLE ROCK ===== -->
+<div class="slide">
+  <span class="section-tag">フェーズ2候補</span>
+  <h2>亀岩パワースポット化</h2>
+  <p class="subtitle">「宮崎＝日本一の長寿県」×「亀＝万年の長寿」＝最強の組み合わせ</p>
+
+  <div style="background: white; border-radius: 12px; padding: 20px; margin: 12px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.06); border-left: 5px solid var(--primary);">
+    <div style="font-weight: 700; margin-bottom: 8px;">📖 神亀（しんき）の伝説</div>
+    <div style="font-size: 0.88rem; color: #555; line-height: 1.7;">
+      むかし、日向灘の荒波の中、一匹の<strong>神亀</strong>が桃源郷の岬を守り続けていた。<br>
+      ある日、神亀は海から上がり、岬の先端に腰を下ろした。海を見守るために。<br>
+      神亀は言った。<br>
+      <em>「この岬を訪れ、私に手を合わせる者には、海のような広い心と、亀のような長き命を授けよう」</em><br>
+      そして神亀は岩になり、今も岬に座っている。——<strong>亀岩に手を合わせ、海に向かって願いを唱えると、神亀がその願いを海の彼方へ運んでくれるという。</strong>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 16px;">亀岩エリアの体験メニュー</h3>
+  <div class="turtle-layout">
+    <div class="turtle-box">
+      <div class="tb-title">🙏 亀岩祈願（基本）</div>
+      <div class="tb-desc">亀岩に手を合わせ、海に向かって願いを唱える。賽銭箱に自由に。</div>
+      <div class="tb-price">無料（投げ銭任意） / コスト：1万円</div>
+    </div>
+    <div class="turtle-box">
+      <div class="tb-title">🐢 運亀（うんき）投げ</div>
+      <div class="tb-desc">小亀を<strong>海に向かって投げ</strong>、海の彼方に届けば願いが叶う。鵜戸神宮の運玉と同じ方式。</div>
+      <div class="tb-price">200円/5個 / コスト：1.5万円</div>
+    </div>
+    <div class="turtle-box">
+      <div class="tb-title">🎴 亀岩おみくじ</div>
+      <div class="tb-desc">長寿の言葉が添えられた専用おみくじ。専門業者に外注（安っぽくならない）。</div>
+      <div class="tb-price">200円 / コスト：1万円</div>
+    </div>
+    <div class="turtle-box">
+      <div class="tb-title">📿 長寿お守り</div>
+      <div class="tb-desc">亀の形のお守り袋。長寿・健康・縁結びの3種。セルフ販売BOX。</div>
+      <div class="tb-price">300〜500円 / コスト：2万円</div>
+    </div>
+    <div class="turtle-box">
+      <div class="tb-title">🌊 亀岩絵馬（亀版）</div>
+      <div class="tb-desc">亀の形の絵馬。亀岩の横に専用掛け場所。風に揺れる絵馬が名物に。</div>
+      <div class="tb-price">300円 / コスト：1万円</div>
+    </div>
+    <div class="turtle-box">
+      <div class="tb-title">🗿 しめ縄＋参拝台</div>
+      <div class="tb-desc">亀岩にしめ縄を張り、砂利敷きの参拝スペースを設置。「ただの岩」がご神体に。</div>
+      <div class="tb-price">— / コスト：1万円</div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 12px;">
+    <strong>亀岩エリア全体：初期投資7.5万円 / 年間収益約130万円</strong>
+  </div>
+</div>
+
+<!-- ===== SLIDE 8: EXPERIENCE MENU ===== -->
+<div class="slide">
+  <span class="section-tag">フェーズ2以降のメニュー</span>
+  <h2>体験メニュー — 全20品</h2>
+  <p class="subtitle">全部やる必要なし。取り入れたいものだけを選んで実施する。</p>
+
+  <h3>🌿 手間ゼロ・置くだけ</h3>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="mi-icon">🪑</div>
+      <div class="mi-name">絶景ベンチ</div>
+      <div class="mi-cost">コスト：3万</div>
+      <div class="mi-price">滞在延長効果</div>
+      <span class="mi-tag t-zero">設置一回</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🎐</div>
+      <div class="mi-name">風鈴の道</div>
+      <div class="mi-cost">コスト：1.5万</div>
+      <div class="mi-price">SNS映え</div>
+      <span class="mi-tag t-zero">設置一回</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">📸</div>
+      <div class="mi-name">撮影スポット看板</div>
+      <div class="mi-cost">コスト：3千</div>
+      <div class="mi-price">来場者投稿促進</div>
+      <span class="mi-tag t-zero">設置一回</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">📔</div>
+      <div class="mi-name">桃源郷パスポート</div>
+      <div class="mi-cost">コスト：1.5万</div>
+      <div class="mi-price">回遊率UP</div>
+      <span class="mi-tag t-low">月1補充</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🌱</div>
+      <div class="mi-name">桃源郷の種</div>
+      <div class="mi-cost">コスト：5千</div>
+      <div class="mi-price">200円 / 利益85%</div>
+      <span class="mi-tag t-low">月1補充</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🌸</div>
+      <div class="mi-name">香り袋づくり</div>
+      <div class="mi-cost">コスト：1万</div>
+      <div class="mi-price">300円 / 利益83%</div>
+      <span class="mi-tag t-low">月1補充</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 16px;">🐢 手間少・月1補充（10〜30分）</h3>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="mi-icon">🐢</div>
+      <div class="mi-name">運亀投げ</div>
+      <div class="mi-cost">コスト：1.5万</div>
+      <div class="mi-price">200円/5個 / 年24万</div>
+      <span class="mi-tag t-low">月1補充</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🎴</div>
+      <div class="mi-name">亀岩おみくじ</div>
+      <div class="mi-cost">コスト：1万</div>
+      <div class="mi-price">200円 / 年24万</div>
+      <span class="mi-tag t-low">業者外注</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">📿</div>
+      <div class="mi-name">長寿お守り</div>
+      <div class="mi-cost">コスト：2万</div>
+      <div class="mi-price">300〜500円 / 年30万</div>
+      <span class="mi-tag t-low">月1補充</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">✉️</div>
+      <div class="mi-name">桃源郷手紙</div>
+      <div class="mi-cost">コスト：1万</div>
+      <div class="mi-price">300円 / 1年後に届く</div>
+      <span class="mi-tag t-low">月1回収</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🌊</div>
+      <div class="mi-name">海風絵馬</div>
+      <div class="mi-cost">コスト：2万</div>
+      <div class="mi-price">300円 / 年36万</div>
+      <span class="mi-tag t-low">月1補充</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🍀</div>
+      <div class="mi-name">花の小径（植え体験）</div>
+      <div class="mi-cost">コスト：1万</div>
+      <div class="mi-price">200円 / 年24万</div>
+      <span class="mi-tag t-low">季節対応</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 16px;">🎪 イベント系（手間あり）</h3>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <div class="mi-icon">🕯️</div>
+      <div class="mi-name">LEDキャンドルナイト</div>
+      <div class="mi-cost">コスト：2.5万</div>
+      <div class="mi-price">月1回 / 1,000円</div>
+      <span class="mi-tag t-event">月1開催</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🌅</div>
+      <div class="mi-name">朝日の桃源郷</div>
+      <div class="mi-cost">コスト：5千</div>
+      <div class="mi-price">月1回 / 500円</div>
+      <span class="mi-tag t-event">月1早朝</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🗿</div>
+      <div class="mi-name">神亀伝説の石碑4基</div>
+      <div class="mi-cost">コスト：3万</div>
+      <div class="mi-price">物語体験</div>
+      <span class="mi-tag t-zero">設置一回</span>
+    </div>
+    <div class="menu-item">
+      <div class="mi-icon">🏮</div>
+      <div class="mi-name">簡易東屋（雨宿り）</div>
+      <div class="mi-cost">コスト：5〜10万</div>
+      <div class="mi-price">雨天対策</div>
+      <span class="mi-tag t-zero">設置一回</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 9: RAIN EXPERIENCES ===== -->
+<div class="slide">
+  <span class="section-tag">🌧️ 雨の日を逆手に取る</span>
+  <h2>雨の桃源郷 — 雨の日限定体験</h2>
+  <p class="subtitle">梅雨＝アジサイの見ごろ。雨を売りに変える。入場料は割引しない。</p>
+
+  <div class="rain-section">
+    <div style="text-align: center; font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 16px;">
+      アジサイは雨に濡れる方が、色が鮮やかに輝く
+    </div>
+
+    <div class="card-grid">
+      <div class="card rain">
+        <div class="card-icon">💎</div>
+        <div class="card-title">雨粒フォトスポット</div>
+        <div class="card-desc">水滴が花びらに乗ったアジサイは<br>ダイヤモンドのように輝く。<br>プロカメラマンが狙う絶景。</div>
+        <div class="card-price">コスト：0円（案内板のみ）</div>
+      </div>
+      <div class="card rain">
+        <div class="card-icon">🐸</div>
+        <div class="card-title">桃ガエルスタンプ</div>
+        <div class="card-desc">雨の日限定スタンプ。<br>園内のカエルを探してスタンプGET。<br>子供が喜ぶ。</div>
+        <div class="card-price">コスト：500円（スタンプ1個）</div>
+      </div>
+      <div class="card rain">
+        <div class="card-icon">🌂</div>
+        <div class="card-title">花の透明傘</div>
+        <div class="card-desc">透明傘に花のステッカーを貼って歩く。<br>傘越しにアジサイ×海の構図。<br>持ち帰りOK＝歩く広告塔。</div>
+        <div class="card-price">500円（傘＋ステッカー）</div>
+      </div>
+      <div class="card rain">
+        <div class="card-icon">🍵</div>
+        <div class="card-title">温かいお茶のふるまい</div>
+        <div class="card-desc">雨の日に熱いお茶を一杯無料で。<br>「雨の日に来てくれてありがとう」<br>= 最高の口コミ。</div>
+        <div class="card-price">コスト：月1,000円未満</div>
+      </div>
+      <div class="card rain">
+        <div class="card-icon">🎴</div>
+        <div class="card-title">雨上がりみくじ</div>
+        <div class="card-desc">雨の日限定のおみくじ。<br>「雨の後にこそ、虹が架かる」<br>雨の日だけ引ける希少性。</div>
+        <div class="card-price">200円 / コスト：+5千円</div>
+      </div>
+      <div class="card rain">
+        <div class="card-icon">☁️</div>
+        <div class="card-title">霧の桃源郷</div>
+        <div class="card-desc">雨上がりに海から霧が立ち上る<br>幻想的な景色。「雨の日に行った人だけが見える」</div>
+        <div class="card-price">コスト：3千円（案内板）</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 12px; font-size: 0.9rem; color: var(--gray);">
+    <strong>メッセージ：</strong>晴れの日には晴れの良さ、雨の日には雨の良さがある。<br>どちらでも桃源郷は美しい。
+  </div>
+</div>
+
+<!-- ===== SLIDE 10: SIMULATION ===== -->
+<div class="slide">
+  <h2>黒字化シミュレーション</h2>
+  <p class="subtitle">フェーズ1→フェーズ2→黒字化の3段階</p>
+
+  <div class="sim-container">
+    <div class="sim-box before">
+      <div class="sim-title">🔻 現状</div>
+      <div class="sim-bar-wrap">
+        <div class="sim-bar-label">年間収入</div>
+        <div class="sim-bar-outer">
+          <div class="sim-bar-inner" style="width: 55%; background: var(--accent2);">約200〜400万</div>
+        </div>
+      </div>
+      <div class="sim-bar-wrap">
+        <div class="sim-bar-label">年間経費</div>
+        <div class="sim-bar-outer">
+          <div class="sim-bar-inner" style="width: 90%; background: var(--gray);">約600〜800万</div>
+        </div>
+      </div>
+      <div class="sim-result red">
+        年間赤字 ▲300〜500万
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; font-size: 2rem; color: var(--primary);">→</div>
+
+    <div class="sim-box after">
+      <div class="sim-title">🔺 フェーズ1完了後</div>
+      <div class="sim-bar-wrap">
+        <div class="sim-bar-label">年間収入</div>
+        <div class="sim-bar-outer">
+          <div class="sim-bar-inner" style="width: 75%; background: var(--success);">約520〜720万</div>
+        </div>
+      </div>
+      <div class="sim-bar-wrap">
+        <div class="sim-bar-label">年間経費</div>
+        <div class="sim-bar-outer">
+          <div class="sim-bar-inner" style="width: 90%; background: var(--gray);">約610〜810万</div>
+        </div>
+      </div>
+      <div class="sim-result" style="background: #fff3cd; color: #856404;">
+        赤字半減 ▲0〜290万
+      </div>
+    </div>
+  </div>
+
+  <div style="background: white; border-radius: 12px; padding: 18px; margin-top: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+    <h3 style="margin-bottom: 10px;">追加収入の内訳</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">🌸 春（桜＋桃）入場料</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+130万</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">🍁 秋（紅葉）入場料</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+70万</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">🌊 海風絵馬</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+36万</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">📈 Googleマップ・看板効果</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+80万</td>
+      </tr>
+      <tr style="background: #f0fff4;">
+        <td style="padding: 6px; font-weight: 700;">フェーズ1 合計</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700; color: var(--success); font-size: 1.05rem;">+316万</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background: white; border-radius: 12px; padding: 18px; margin-top: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+    <h3 style="margin-bottom: 10px;">フェーズ2追加（亀岩＋物販＋イベント）</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">🐢 亀岩エリア全体（おみくじ・お守り・運亀等）</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+130万</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">🌸 物販（種・香り袋・レモネード等）</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+50万</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px;">🎪 イベント（ナイト・朝日）</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700;">+80万</td>
+      </tr>
+      <tr style="background: #e8f5e9;">
+        <td style="padding: 6px; font-weight: 700;">フェーズ1＋2 合計</td>
+        <td style="padding: 6px; text-align: right; font-weight: 700; color: var(--success); font-size: 1.05rem;">+576万</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="text-align: center; margin-top: 12px;">
+    <strong style="color: var(--success); font-size: 1.1rem;">フェーズ2まで実施で、年間収入 約780〜980万 → 黒字化の目途</strong>
+  </div>
+</div>
+
+<!-- ===== SLIDE 11: SNS & MARKETING ===== -->
+<div class="slide">
+  <span class="section-tag">集客の基盤</span>
+  <h2>集客 — SNS・メディア・役場</h2>
+  <p class="subtitle">施設管理者は投稿しない。環境を整える一回きり。</p>
+
+  <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <div class="card-title">Googleマップ（最優先）</div>
+      <div class="card-desc">
+        ・ビジネスプロフィール登録<br>
+        ・写真50枚UP（花・海・亀岩）<br>
+        ・営業時間・料金・アクセス入力<br>
+        ・「今月の見ごろ」を月1更新（5分）<br>
+        <strong>シニアも使う。車で来る人の導線。</strong>
+      </div>
+      <div class="card-price">コスト：0円 / 手間：一回30分</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📸</div>
+      <div class="card-title">SNS（環境だけ整える）</div>
+      <div class="card-desc">
+        ・撮影スポットにハッシュタグ看板<br>
+        ・「#桃源郷岬 でシェア」の案内板<br>
+        ・来場者が勝手に投稿する仕組み<br>
+        <strong>毎日投稿する必要はない。</strong>
+      </div>
+      <div class="card-price">コスト：3千円（看板）/ 手間：設置一回</div>
+    </div>
+    <div class="card accent">
+      <div class="card-icon">📺</div>
+      <div class="card-title">地元メディア営業</div>
+      <div class="card-desc">
+        ・テレビ宮崎（UMK）営業局<br>
+        ・宮崎日日新聞 地域情報部<br>
+        ・MRT（宮崎放送）<br>
+        <strong>「個人が守る桃源郷」のストーリー</strong>
+      </div>
+      <div class="card-price">コスト：0円 / 手間：メール1通</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 20px;">役場との関係づくり（3ステップ）</h3>
+  <div class="flow">
+    <div class="flow-box" style="border-color: var(--success); color: var(--success); background: #f0fff4;">
+      ① 観光マップへの<br>掲載を頼む<br><span style="font-size:0.75rem;">ハードル低</span>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" style="border-color: var(--blue-light); color: var(--blue-light); background: #e8f4f8;">
+      ② 国道の案内標識<br>設置を提案<br><span style="font-size:0.75rem;">町予算で可能</span>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-box" style="border-color: var(--accent); color: var(--accent); background: #fff5f0;">
+      ③ 協力隊の配置を<br>最終目標に<br><span style="font-size:0.75rem;">年350万の人的支援</span>
+    </div>
+  </div>
+  <div style="text-align: center; font-size: 0.85rem; color: var(--gray);">
+    「桃源郷岬のため」ではなく「門川町の観光のため」という切り口で提案する
+  </div>
+</div>
+
+<!-- ===== SLIDE 12: PAYMENT & SAFETY ===== -->
+<div class="slide">
+  <span class="section-tag">運営の基本</span>
+  <h2>支払いと安全の設計</h2>
+  <p class="subtitle">お年寄りが現金で払えること。誰も怪我をしないこと。</p>
+
+  <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="card">
+      <div class="card-title">💰 入場料の支払い</div>
+      <div style="font-size: 0.88rem; margin-top: 8px;">
+        <strong>現金がメイン。QRは補助。</strong><br><br>
+        <span style="font-size: 0.82rem; color: var(--gray);">
+        ・回収型投入箱（下から入れて取り出せない）<br>
+        ・投入箱は大きく目立つ表示<br>
+        ・PayPay・LINE PayのQRは横に小さく<br>
+        ・小型防犯カメラ（ソーラー）1台<br>
+        ・毎日回収（作業30秒）
+        </span>
+      </div>
+      <div class="card-price">コスト：2万円</div>
+    </div>
+    <div class="card">
+      <div class="card-title">⚠️ 安全対策</div>
+      <div style="font-size: 0.88rem; margin-top: 8px;">
+        <strong>崖の上の施設。安全設計が必須。</strong><br><br>
+        <span style="font-size: 0.82rem; color: var(--gray);">
+        ・ベンチは崖から十分離す<br>
+        ・運亀投げは海に向かって（崖側ではない）<br>
+        ・危険箇所に「立入禁止」ロープ<br>
+        ・消火器2カ所設置（イベント時）<br>
+        ・LEDキャンドル使用（火気厳禁時はロウソク不可）
+        </span>
+      </div>
+      <div class="card-price">コスト：1〜2万円</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 20px;">管理作業の負担</h3>
+  <div style="background: white; border-radius: 12px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px; font-weight: 700;">毎日</td>
+        <td style="padding: 6px;">投入箱回収＋在庫チェック</td>
+        <td style="padding: 6px; text-align: right; font-weight: 600;">5分</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px; font-weight: 700;">週1回</td>
+        <td style="padding: 6px;">レモネード補充（夏のみ）</td>
+        <td style="padding: 6px; text-align: right; font-weight: 600;">10分</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px; font-weight: 700;">月1回</td>
+        <td style="padding: 6px;">絵馬・おみくじ・お守り・パスポート等の補充</td>
+        <td style="padding: 6px; text-align: right; font-weight: 600;">30分</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px; font-weight: 700;">月1回</td>
+        <td style="padding: 6px;">風鈴点検・案内板清掃</td>
+        <td style="padding: 6px; text-align: right; font-weight: 600;">15分</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 6px; font-weight: 700;">季節1回</td>
+        <td style="padding: 6px;">花トンネルの花交換・ベンチメンテ</td>
+        <td style="padding: 6px; text-align: right; font-weight: 600;">1時間</td>
+      </tr>
+      <tr style="background: #f0fff4;">
+        <td style="padding: 6px; font-weight: 700;">月間合計</td>
+        <td style="padding: 6px;"></td>
+        <td style="padding: 6px; text-align: right; font-weight: 700; color: var(--success);">約4時間</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SLIDE 13: TIMELINE ===== -->
+<div class="slide">
+  <h2>タイムライン</h2>
+  <p class="subtitle">一つずつ、確実に。生き残るための計画。</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-period">ステップ0：まず確認</div>
+      <ul class="tl-list">
+        <li>花の数字（本数・品種）を確認する</li>
+        <li>年間来場者数の大体の数を聞く</li>
+        <li>各花の見ごろ期間（いつからいつまで）を確認する</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">1ヶ月目</div>
+      <ul class="tl-list">
+        <li>セルフ投入箱＋QR決済を設置（2万円）</li>
+        <li>花の見ごろ期間の入場料徴収を開始</li>
+        <li>Googleマップに写真を50枚UP（一回30分）</li>
+        <li>入口看板を立てる（1万円）</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">2ヶ月目</div>
+      <ul class="tl-list">
+        <li>海風絵馬を設置（2万円）</li>
+        <li>絶景ベンチ3脚を設置（3万円）</li>
+        <li>入口の花トンネルをDIY（2万円）</li>
+        <li>道路案内看板3カ所を設置（5万円）</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">3〜6ヶ月目（フェーズ2）</div>
+      <ul class="tl-list">
+        <li>亀岩にしめ縄＋賽銭箱を設置（1万円）</li>
+        <li>運亀投げを開始（1.5万円）</li>
+        <li>おみくじ・お守りを販売開始（3万円）</li>
+        <li>地元メディアへ取材依頼メール送信（一回）</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">6ヶ月〜1年</div>
+      <ul class="tl-list">
+        <li>風鈴の道・撮影スポットを追加</li>
+        <li>桃源郷パスポート・香り袋等を追加</li>
+        <li>LEDナイトイベントの開催検討</li>
+        <li>役場に観光マップ掲載を相談</li>
+        <li>黒字化の進捗確認・次年度計画</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 14: ROLES ===== -->
+<div class="slide">
+  <h2>誰が何をやるか</h2>
+  <p class="subtitle">設定は一回。継続作業は月4時間以内。</p>
+
+  <div class="role-grid">
+    <div class="role-box itoko">
+      <div class="role-name">🧑‍🌾 現場管理者</div>
+      <ul class="role-list">
+        <li>📌 セルフ投入箱を設置する（一回）</li>
+        <li>📌 入場料の案内看板を立てる（一回）</li>
+        <li>📌 絵馬・おみくじ等を置く（一回）</li>
+        <li>📋 投入箱を毎日回収（5分/日）</li>
+        <li>📋 月1でまとめて補充（1時間/月）</li>
+        <li>📋 花トンネルの花を季節で交換（年4回）</li>
+      </ul>
+      <div style="margin-top: 10px; font-size: 0.85rem; color: var(--blue); font-weight: 600;">
+        → 毎日の作業は5分。月に1回1時間の補充。<br>　 あとは今まで通り現場を守る。
+      </div>
+    </div>
+    <div class="role-box family">
+      <div class="role-name">👨‍👩‍👧‍👦 サポート担当</div>
+      <ul class="role-list">
+        <li>📱 Googleマップに写真をUPする（一回・30分）</li>
+        <li>📧 地元メディアへメールを1通送る（一回）</li>
+        <li>📧 役場に観光マップ掲載を相談（一回）</li>
+        <li>📋 桃源郷手紙を1年後に投函（年1回）</li>
+        <li>📋 HPの「今月の見ごろ」を更新（月1回・5分）</li>
+        <li>📋 おみくじ・お守り等をネットで注文（不定期）</li>
+      </ul>
+      <div style="margin-top: 10px; font-size: 0.85rem; color: var(--accent); font-weight: 600;">
+        → ほぼ一回やって終わり。継続はHP更新のみ（月5分）。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SLIDE 15: CLOSING ===== -->
+<div class="slide closing">
+  <h2>まずは2つだけ</h2>
+  <p class="subtitle">この2つから始めれば、赤字の半分は消える</p>
+
+  <div style="display: flex; gap: 20px; margin: 16px 0; justify-content: center; flex-wrap: wrap;">
+    <div style="background: rgba(255,255,255,0.2); border-radius: 16px; padding: 20px 28px; text-align: center;">
+      <div style="font-size: 2.5rem;">🌸🍁</div>
+      <div style="font-weight: 700; font-size: 1.05rem; margin: 6px 0;">花の見ごろ期間も入場料を取る</div>
+      <div style="font-size: 0.88rem; opacity: 0.8;">コスト：0円</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.2); border-radius: 16px; padding: 20px 28px; text-align: center;">
+      <div style="font-size: 2.5rem;">🌊📝</div>
+      <div style="font-weight: 700; font-size: 1.05rem; margin: 6px 0;">海風絵馬を始める</div>
+      <div style="font-size: 0.88rem; opacity: 0.8;">コスト：2万円</div>
+    </div>
+  </div>
+
+  <div class="closing-box">
+    <div class="closing-quote">
+      桃源郷岬には、日本一になれる素材が揃っている。<br><br>
+      海と花が重なる絶景。<br>
+      四季を彩る花々。<br>
+      海を見守る亀岩。<br><br>
+      足りないのは花ではない。<br>
+      「知られること」だけ。<br><br>
+      この資料はメニューです。<br>
+      全部やる必要はありません。<br>
+      <strong>「これいいね」と思ったものだけ、一つずつ。</strong>
+    </div>
+  </div>
+
+  <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">
+    桃源郷岬 再生プラン
+  </p>
+</div>
+
+<div class="nav">
+  スクロールで全15スライド表示
+</div>
+
+</body>
+</html>
