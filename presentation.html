@@ -544,8 +544,167 @@
     .menu-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  .export-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 200;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .export-btn:hover { background: #d35a3f; }
+  .export-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .export-gallery {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 300;
+    overflow-y: auto;
+    padding: 40px 20px;
+    display: none;
+  }
+  .export-gallery-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .export-gallery h3 { color: white; text-align: center; margin-bottom: 20px; font-size: 1.3rem; }
+  .export-gallery-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .export-gallery-item img { width: 100%; display: block; }
+  .export-gallery-item .slide-label {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .export-gallery-item .slide-label button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .export-gallery-item .slide-label button:hover { background: #d35a3f; }
+  .export-close {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    background: white;
+    color: #333;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 310;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media print { .export-btn { display: none; } }
+</style>
 </head>
 <body>
+
+<button class="export-btn" onclick="exportSlides()">📷 スライド画像化</button>
+<div class="export-gallery" id="export-gallery">
+  <button class="export-close" onclick="closeGallery()">&times;</button>
+  <div class="export-gallery-inner" id="gallery-inner"></div>
+</div>
+
+<script>
+async function exportSlides() {
+  const btn = document.querySelector('.export-btn');
+  btn.style.display = 'none';
+
+  const overlay = document.createElement('div');
+  overlay.className = 'export-overlay';
+  overlay.textContent = 'スライドを画像に変換中...';
+  document.body.appendChild(overlay);
+
+  const slides = document.querySelectorAll('.slide');
+  const gallery = document.getElementById('gallery-inner');
+  gallery.innerHTML = '<h3>📷 スライド画像 — 長押しまたは右クリックで保存</h3>';
+
+  for (let i = 0; i < slides.length; i++) {
+    const slide = slides[i];
+    overlay.textContent = `変換中... (${i + 1}/${slides.length})`;
+
+    try {
+      const canvas = await html2canvas(slide, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: slide.classList.contains('cover') || slide.classList.contains('closing') ? null : '#fefae0'
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      const item = document.createElement('div');
+      item.className = 'export-gallery-item';
+      item.innerHTML = `
+        <img src="${imgData}" alt="スライド ${i + 1}">
+        <div class="slide-label">
+          <span>スライド ${i + 1} / ${slides.length}</span>
+          <button onclick="downloadSlide('${imgData}', ${i + 1})">💾 保存</button>
+        </div>
+      `;
+      gallery.appendChild(item);
+    } catch(e) {
+      console.error('Slide ' + (i+1) + ' error:', e);
+    }
+  }
+
+  document.body.removeChild(overlay);
+  document.getElementById('export-gallery').style.display = 'block';
+}
+
+function downloadSlide(dataUrl, num) {
+  const a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = '桃源郷岬_スライド' + String(num).padStart(2, '0') + '.png';
+  a.click();
+}
+
+function closeGallery() {
+  document.getElementById('export-gallery').style.display = 'none';
+  document.querySelector('.export-btn').style.display = 'flex';
+}
+</script>
 
 <!-- ===== SLIDE 1: COVER ===== -->
 <div class="slide cover">
