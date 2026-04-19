@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>桃源郷岬 | 200万本のアジサイが咲く、天空の庭園 - 宮崎県門川町</title>
     <meta name="description" content="宮崎県東臼杵郡門川町にある桃源郷岬。約20万平方メートルの園内に80種200万本のアジサイ、桃、ジャカランダ、スイレン、ブーゲンビリア、77種1000本の桜など、四季折々の花が楽しめます。絶滅危惧種のオオバネムの木や20数種類の野鳥・トンボの観察も。">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sushihut35-code.github.io/togenkyo-cape/">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="桃源郷岬 | 200万本のアジサイが咲く、天空の庭園">
+    <meta property="og:description" content="宮崎県門川町の桃源郷岬。80種200万本のアジサイ、77種1000本の桜など四季の花が楽しめる天空の庭園。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sushihut35-code.github.io/togenkyo-cape/">
+    <meta property="og:image" content="https://sushihut35-code.github.io/togenkyo-cape/images/tougenkyo3.jpg">
+    <meta property="og:site_name" content="桃源郷岬">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="桃源郷岬 | 200万本のアジサイが咲く、天空の庭園">
+    <meta name="twitter:description" content="宮崎県門川町の桃源郷岬。80種200万本のアジサイ、77種1000本の桜など四季の花が楽しめる天空の庭園。">
+    <meta name="twitter:image" content="https://sushihut35-code.github.io/togenkyo-cape/images/tougenkyo3.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TouristAttraction",
+        "name": "桃源郷岬",
+        "alternateName": ["Togenkyo Cape", "桃源乡岬", "도겐쿄 곶"],
+        "description": "宮崎県東臼杵郡門川町にある桃源郷岬。約20万平方メートルの園内に80種200万本のアジサイ、四季折々の花が楽しめる天空の庭園。",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "JP",
+            "addressRegion": "宮崎県",
+            "addressLocality": "東臼杵郡門川町",
+            "streetAddress": "庵川",
+            "postalCode": "889-0602"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "opens": "08:00",
+            "closes": "17:00"
+        },
+        "image": "https://sushihut35-code.github.io/togenkyo-cape/images/tougenkyo3.jpg",
+        "url": "https://sushihut35-code.github.io/togenkyo-cape/",
+        "priceRange": "¥300-¥1000",
+        "sameAs": ["https://www.instagram.com/tougenkyomisaki/"],
+        "publicAccess": true,
+        "isAccessibleForFree": false,
+        "touristType": ["Nature lovers", "Photography enthusiasts", "Families"],
+        "keywords": ["hydrangea", "ajisai", "flowers", "nature", "Miyazaki", "Kadogawa", "cherry blossoms"]
+    }
+    </script>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,20 +78,26 @@
                     <span class="logo-sub">Togenkyo Cape</span>
                 </a>
             </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ja">JA</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="ko">한국어</button>
+            </div>
             <button class="hamburger" id="hamburger" aria-label="メニュー">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">ホーム</a></li>
-                <li><a href="#features">桃源郷の魅力</a></li>
-                <li><a href="#seasons">四季の花</a></li>
-                <li><a href="#nature">自然観察</a></li>
-                <li><a href="#latest">最新情報</a></li>
-                <li><a href="#gallery">ギャラリー</a></li>
-                <li><a href="#access">アクセス</a></li>
-                <li><a href="#info">営業情報</a></li>
+                <li><a href="#home" data-i18n="nav.home">ホーム</a></li>
+                <li><a href="#features" data-i18n="nav.features">桃源郷の魅力</a></li>
+                <li><a href="#seasons" data-i18n="nav.seasons">四季の花</a></li>
+                <li><a href="#nature" data-i18n="nav.nature">自然観察</a></li>
+                <li><a href="#latest" data-i18n="nav.latest">最新情報</a></li>
+                <li><a href="#gallery" data-i18n="nav.gallery">ギャラリー</a></li>
+                <li><a href="#access" data-i18n="nav.access">アクセス</a></li>
+                <li><a href="#info" data-i18n="nav.info">営業情報</a></li>
                 <li><a href="https://www.instagram.com/tougenkyomisaki/" target="_blank" rel="noopener noreferrer" class="nav-instagram-link">
                     <svg class="instagram-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -55,23 +119,23 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg">
-            <img src="images/tougenkyo3.jpg" alt="桃源郷岬のアジサイ庭園" class="hero-image">
+            <img src="images/tougenkyo3.jpg" alt="桃源郷岬のアジサイ庭園" class="hero-image" data-i18n-alt="hero.alt">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-subtitle">宮崎県東臼杵郡門川町</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">宮崎県東臼杵郡門川町</p>
             <h1 class="hero-title">
-                <span class="title-line">桃源郷岬</span>
-                <span class="title-small">200万本のアジサイが咲く<br>〜天空の庭園〜</span>
+                <span class="title-line" data-i18n="hero.titleLine">桃源郷岬</span>
+                <span class="title-small" data-i18n-html="hero.titleSmall">200万本のアジサイが咲く<br>〜天空の庭園〜</span>
             </h1>
-            <p class="hero-description">
+            <p class="hero-description" data-i18n-html="hero.description">
                 海風に揺れる200万本のアジサイ、<br>
                 自然と触れ合う20万平方メートルの奇跡。<br>
                 四季折々の美しさに出会える場所。
             </p>
             <div class="hero-buttons">
-                <a href="https://www.google.com/maps/search/?api=1&query=宮崎県東臼杵郡門川町庵川+桃源郷岬" target="_blank" rel="noopener noreferrer" class="btn btn-primary">🗺️ アクセスを見る</a>
-                <a href="#features" class="btn btn-secondary">🌸 桃源郷の魅力</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=宮崎県東臼杵郡門川町庵川+桃源郷岬" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero.btnAccess">🗺️ アクセスを見る</a>
+                <a href="#features" class="btn btn-secondary" data-i18n="hero.btnFeatures">🌸 桃源郷の魅力</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -84,12 +148,12 @@
     <section class="greeting">
         <div class="container">
             <div class="greeting-content">
-                <h3 class="greeting-title">【ご挨拶】</h3>
-                <p class="greeting-text">
+                <h3 class="greeting-title" data-i18n="greeting.title">【ご挨拶】</h3>
+                <p class="greeting-text" data-i18n-html="greeting.text1">
                     桃源郷は、宮崎県門川町遠見半島に位置し、東京ドーム４つ分の広さを持ち、７色にも色を変えると<br>
                     言われる多くのアジサイが 楽しめる雄大絶景の自然園です。
                 </p>
-                <p class="greeting-text">
+                <p class="greeting-text" data-i18n-html="greeting.text2">
                     当園を訪れた方にとって、ゆったりとした時間を過ごせる癒しの空間、<br>
                     文字どおり理想郷＝桃源郷に なるよう、日本一のあじさい園づくりをめざしています。
                 </p>
@@ -101,23 +165,22 @@
     <section id="latest" class="latest-news">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">最新情報</h2>
-                <p class="section-subtitle">Latest News</p>
+                <h2 class="section-title" data-i18n="latest.title">最新情報</h2>
+                <p class="section-subtitle" data-i18n="latest.subtitle">Latest News</p>
                 <div class="instagram-update-badge">
                     <span class="badge-icon">📸</span>
-                    <span class="badge-text">Instagramで更新可能！</span>
+                    <span class="badge-text" data-i18n="latest.badgeText">Instagramで更新可能！</span>
                 </div>
             </div>
 
             <div id="instagram-feed" class="instagram-feed">
-                <!-- Instagramからの投稿がここに自動表示されます -->
                 <div class="loading">
                     <p>読み込み中...</p>
                 </div>
             </div>
 
             <div class="instagram-link">
-                <a href="https://www.instagram.com/tougenkyomisaki/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <a href="https://www.instagram.com/tougenkyomisaki/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="latest.btnText">
                     Instagramでもっと見る &rarr;
                 </a>
             </div>
@@ -130,20 +193,20 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <span class="stat-number">200万</span>
-                    <span class="stat-label">本のアジサイ</span>
+                    <span class="stat-number" data-i18n="stats.number1">200万</span>
+                    <span class="stat-label" data-i18n="stats.label1">本のアジサイ</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">80</span>
-                    <span class="stat-label">種類</span>
+                    <span class="stat-number" data-i18n="stats.number2">80</span>
+                    <span class="stat-label" data-i18n="stats.label2">種類</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">20万㎡</span>
-                    <span class="stat-label">敷地面積</span>
+                    <span class="stat-number" data-i18n="stats.number3">20万㎡</span>
+                    <span class="stat-label" data-i18n="stats.label3">敷地面積</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">四季</span>
-                    <span class="stat-label">通年楽しめる</span>
+                    <span class="stat-number" data-i18n="stats.number4">四季</span>
+                    <span class="stat-label" data-i18n="stats.label4">通年楽しめる</span>
                 </div>
             </div>
         </div>
@@ -152,16 +215,16 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">桃源郷岬の魅力</h2>
-            <p class="section-subtitle">The Beauty of Togenkyo Cape</p>
+            <h2 class="section-title" data-i18n="features.title">桃源郷岬の魅力</h2>
+            <p class="section-subtitle" data-i18n="features.subtitle">The Beauty of Togenkyo Cape</p>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-image">
-                        <img src="images/桃源郷広場.png" alt="日本最大級のアジサイ園">
+                        <img src="images/桃源郷広場.png" alt="日本最大級のアジサイ園" data-i18n-alt="features.alt1">
                     </div>
-                    <h3>日本最大級のアジサイ・パノラマ</h3>
-                    <p>
+                    <h3 data-i18n="features.card1.title">日本最大級のアジサイ・パノラマ</h3>
+                    <p data-i18n-html="features.card1.desc">
                         東京ドーム約4個分の広大な岬が、<br>
                         80種の彩りに染まる。<br>
                         崖一面を埋め尽くすアジサイの絨毯は、<br>
@@ -173,10 +236,10 @@
 
                 <div class="feature-card">
                     <div class="feature-image">
-                        <img src="images/tougenkyo3.jpg" alt="絶景のロケーション">
+                        <img src="images/tougenkyo3.jpg" alt="絶景のロケーション" data-i18n-alt="features.alt2">
                     </div>
-                    <h3>絶景のロケーション</h3>
-                    <p>
+                    <h3 data-i18n="features.card2.title">絶景のロケーション</h3>
+                    <p data-i18n-html="features.card2.desc">
                         太平洋を一望できる岬の上に広がる庭園。<br>
                         海と花のコラボレーション。<br>
                         写真好きにはたまらない光景が広がります。
@@ -185,10 +248,10 @@
 
                 <div class="feature-card">
                     <div class="feature-image">
-                        <img src="images/momo.jpg" alt="四季を通じて楽しめる">
+                        <img src="images/momo.jpg" alt="四季を通じて楽しめる" data-i18n-alt="features.alt3">
                     </div>
-                    <h3>四季を通じて楽しめる</h3>
-                    <p>
+                    <h3 data-i18n="features.card3.title">四季を通じて楽しめる</h3>
+                    <p data-i18n-html="features.card3.desc">
                         春は桃と桜、夏はアジサイ、<br>
                         秋はスイレンとモミジ、冬には冬桜100本が咲き誇ります。<br>
                         一年中美しい庭園を楽しめます。
@@ -202,8 +265,8 @@
                             <circle cx="12" cy="15" r="1"/>
                         </svg>
                     </div>
-                    <h3>世界でここだけ<br>3000羽の奇跡</h3>
-                    <p>
+                    <h3 data-i18n-html="features.card4.title">世界でここだけ<br>3000羽の奇跡</h3>
+                    <p data-i18n-html="features.card4.desc">
                         桃源郷のすぐ目の前に浮かぶ「枇榔島（びろうじま）」は、<br>
                         実は世界最大のカンムリウミスズメの繁殖地。<br>
                         世界中の個体数の約半数が集まる、<br>
@@ -221,8 +284,8 @@
                             <path d="M21 15l-5-5L5 21"/>
                         </svg>
                     </div>
-                    <h3>自然の宝庫</h3>
-                    <p>
+                    <h3 data-i18n="features.card5.title">自然の宝庫</h3>
+                    <p data-i18n-html="features.card5.desc">
                         絶滅危惧種のオオバネムの木を含む、<br>
                         20数種類の野鳥やトンボも観察可能。<br>
                         自然と触れ合う至福の時間を。
@@ -231,10 +294,10 @@
 
                 <div class="feature-card">
                     <div class="feature-image">
-                        <img src="images/kame.png" alt="亀岩の奇観">
+                        <img src="images/kame.png" alt="亀岩の奇観" data-i18n-alt="features.alt6">
                     </div>
-                    <h3>亀岩の奇観</h3>
-                    <p>
+                    <h3 data-i18n="features.card6.title">亀岩の奇観</h3>
+                    <p data-i18n-html="features.card6.desc">
                         園から見える亀の形をした不思議な岩があります。<br>
                         自然が作り出した芸術作品。<br>
                         写真好きにはたまらない絶景スポットです。
@@ -243,10 +306,10 @@
 
                 <div class="feature-card">
                     <div class="feature-image">
-                        <img src="images/asagi.jpg" alt="2000kmを旅する、幸運の使者">
+                        <img src="images/asagi.jpg" alt="2000kmを旅する、幸運の使者" data-i18n-alt="features.alt7">
                     </div>
-                    <h3>2000kmを旅する、幸運の使者</h3>
-                    <p>
+                    <h3 data-i18n="features.card7.title">2000kmを旅する、幸運の使者</h3>
+                    <p data-i18n-html="features.card7.desc">
                         日本から台湾へ、命を懸けて海を渡るアサギマダラ。<br>
                         旅の途中に彼らが選んだ「休息の地」が、この桃源郷岬です。<br>
                         「体に止まると幸せが訪れる」<br><br>
@@ -261,114 +324,94 @@
     <!-- Seasons Section -->
     <section id="seasons" class="seasons">
         <div class="container">
-            <h2 class="section-title">四季の花</h2>
-            <p class="section-subtitle">Flowers of Four Seasons</p>
+            <h2 class="section-title" data-i18n="seasons.title">四季の花</h2>
+            <p class="section-subtitle" data-i18n="seasons.subtitle">Flowers of Four Seasons</p>
 
             <div class="seasons-grid">
                 <div class="season-card spring">
                     <div class="season-icon">🌸</div>
-                    <h3>春（3月〜5月）</h3>
+                    <h3 data-i18n="seasons.spring.title">春（3月〜5月）</h3>
                     <ul class="season-list">
-                        <li>桃</li>
-                        <li>ツツジ</li>
-                        <li>フジ</li>
-                        <li>77種1000本の桜</li>
+                        <li data-i18n="seasons.spring.item1">桃</li>
+                        <li data-i18n="seasons.spring.item2">ツツジ</li>
+                        <li data-i18n="seasons.spring.item3">フジ</li>
+                        <li data-i18n="seasons.spring.item4">77種1000本の桜</li>
                     </ul>
-                    <p class="season-desc">春の訪れと共に、桃と桜が園内を彩ります。特に桜の季節には、77種類もの桜が次々と咲き誇り、長い期間楽しめます。</p>
+                    <p class="season-desc" data-i18n="seasons.spring.desc">春の訪れと共に、桃と桜が園内を彩ります。特に桜の季節には、77種類もの桜が次々と咲き誇り、長い期間楽しめます。</p>
                 </div>
 
                 <div class="season-card summer">
                     <div class="season-icon">
                         <svg class="hydrangea-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                            <!-- アジサイの花（小さな花の集合） -->
                             <g class="hydrangea-flowers">
-                                <!-- 中央の花 -->
                                 <circle cx="50" cy="50" r="12" fill="#FFB6C1"/>
                                 <circle cx="50" cy="50" r="6" fill="#FFE4E1"/>
-
-                                <!-- 周囲の花 -->
                                 <circle cx="50" cy="30" r="11" fill="#FFB6C1"/>
                                 <circle cx="50" cy="30" r="5" fill="#FFE4E1"/>
-
                                 <circle cx="70" cy="40" r="11" fill="#FFC0CB"/>
                                 <circle cx="70" cy="40" r="5" fill="#FFE4E1"/>
-
                                 <circle cx="70" cy="60" r="10" fill="#FFB6C1"/>
                                 <circle cx="70" cy="60" r="5" fill="#FFE4E1"/>
-
                                 <circle cx="50" cy="70" r="10" fill="#FFC0CB"/>
                                 <circle cx="50" cy="70" r="5" fill="#FFE4E1"/>
-
                                 <circle cx="30" cy="60" r="10" fill="#FFB6C1"/>
                                 <circle cx="30" cy="60" r="5" fill="#FFE4E1"/>
-
                                 <circle cx="30" cy="40" r="11" fill="#FFC0CB"/>
                                 <circle cx="30" cy="40" r="5" fill="#FFE4E1"/>
-
-                                <!-- 外側の花 -->
                                 <circle cx="40" cy="25" r="9" fill="#FFC0CB"/>
                                 <circle cx="40" cy="25" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="60" cy="25" r="9" fill="#FFB6C1"/>
                                 <circle cx="60" cy="25" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="75" cy="35" r="8" fill="#FFB6C1"/>
                                 <circle cx="75" cy="35" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="80" cy="50" r="9" fill="#FFC0CB"/>
                                 <circle cx="80" cy="50" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="75" cy="65" r="8" fill="#FFB6C1"/>
                                 <circle cx="75" cy="65" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="60" cy="75" r="8" fill="#FFC0CB"/>
                                 <circle cx="60" cy="75" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="40" cy="75" r="8" fill="#FFB6C1"/>
                                 <circle cx="40" cy="75" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="25" cy="65" r="8" fill="#FFC0CB"/>
                                 <circle cx="25" cy="65" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="20" cy="50" r="9" fill="#FFB6C1"/>
                                 <circle cx="20" cy="50" r="4" fill="#FFE4E1"/>
-
                                 <circle cx="25" cy="35" r="8" fill="#FFC0CB"/>
                                 <circle cx="25" cy="35" r="4" fill="#FFE4E1"/>
                             </g>
                         </svg>
                     </div>
-                    <h3>夏（5月末〜6月末）</h3>
+                    <h3 data-i18n="seasons.summer.title">夏（5月末〜6月末）</h3>
                     <ul class="season-list">
-                        <li>80種200万本のアジサイ</li>
-                        <li>ブーゲンビリア</li>
-                        <li>ジャカランダ</li>
-                        <li>ニッポウアザミ</li>
+                        <li data-i18n="seasons.summer.item1">80種200万本のアジサイ</li>
+                        <li data-i18n="seasons.summer.item2">ブーゲンビリア</li>
+                        <li data-i18n="seasons.summer.item3">ジャカランダ</li>
+                        <li data-i18n="seasons.summer.item4">ニッポウアザミ</li>
                     </ul>
-                    <p class="season-desc">見頃は６月上旬から中旬にかけて咲きます。</p>
+                    <p class="season-desc" data-i18n="seasons.summer.desc">見頃は６月上旬から中旬にかけて咲きます。</p>
                 </div>
 
                 <div class="season-card autumn">
                     <div class="season-icon">🍁</div>
-                    <h3>秋（9月〜11月）</h3>
+                    <h3 data-i18n="seasons.autumn.title">秋（9月〜11月）</h3>
                     <ul class="season-list">
-                        <li>スイレン</li>
-                        <li>1000本のモミジ</li>
-                        <li>ブーゲンビリア</li>
+                        <li data-i18n="seasons.autumn.item1">スイレン</li>
+                        <li data-i18n="seasons.autumn.item2">1000本のモミジ</li>
+                        <li data-i18n="seasons.autumn.item3">ブーゲンビリア</li>
                     </ul>
-                    <p class="season-desc">秋はスイレンとモミジの季節。池に咲くスイレンと、山を染める紅葉のコントラストが美しい、静寂の中の美しさを楽しめます。</p>
+                    <p class="season-desc" data-i18n="seasons.autumn.desc">秋はスイレンとモミジの季節。池に咲くスイレンと、山を染める紅葉のコントラストが美しい、静寂の中の美しさを楽しめます。</p>
                 </div>
 
                 <div class="season-card winter">
                     <div class="season-icon">❄️</div>
-                    <h3>冬（12月〜2月）</h3>
+                    <h3 data-i18n="seasons.winter.title">冬（12月〜2月）</h3>
                     <ul class="season-list">
-                        <li>冬桜100本</li>
-                        <li>静寂の庭園</li>
-                        <li>冬越しの植物観察</li>
-                        <li>絶滅危惧種のオオバネムの木</li>
+                        <li data-i18n="seasons.winter.item1">冬桜100本</li>
+                        <li data-i18n="seasons.winter.item2">静寂の庭園</li>
+                        <li data-i18n="seasons.winter.item3">冬越しの植物観察</li>
+                        <li data-i18n="seasons.winter.item4">絶滅危惧種のオオバネムの木</li>
                     </ul>
-                    <p class="season-desc">冬は静寂の中で自然観察を。絶滅危惧種のオオバネムの木や、冬を越す植物の力強さを感じることができます。</p>
+                    <p class="season-desc" data-i18n="seasons.winter.desc">冬は静寂の中で自然観察を。絶滅危惧種のオオバネムの木や、冬を越す植物の力強さを感じることができます。</p>
                 </div>
             </div>
         </div>
@@ -377,65 +420,65 @@
     <!-- Nature Section -->
     <section id="nature" class="nature">
         <div class="container">
-            <h2 class="section-title">自然観察</h2>
-            <p class="section-subtitle">Wildlife & Nature</p>
+            <h2 class="section-title" data-i18n="nature.title">自然観察</h2>
+            <p class="section-subtitle" data-i18n="nature.subtitle">Wildlife & Nature</p>
 
             <div class="nature-content">
                 <div class="nature-text">
-                    <h3>自然の宝庫としての桃源郷岬</h3>
-                    <p>
+                    <h3 data-i18n="nature.introTitle">自然の宝庫としての桃源郷岬</h3>
+                    <p data-i18n="nature.intro">
                         桃源郷岬は、美しい花だけでなく、多様な動植物が生息する自然の宝庫です。
                         特に絶滅危惧種のオオバネムの木は、本園を訪れる大きな魅力の一つとなっています。
                     </p>
 
                     <div class="nature-grid">
                         <div class="nature-item">
-                            <h4>🐦 野鳥観察</h4>
-                            <p>20数種類の野鳥が生息しています。鳥好きにはたまらない観察スポットです。</p>
+                            <h4 data-i18n="nature.birds.title">🐦 野鳥観察</h4>
+                            <p data-i18n="nature.birds.desc">20数種類の野鳥が生息しています。鳥好きにはたまらない観察スポットです。</p>
                         </div>
 
                         <div class="nature-item">
-                            <h4>🦋 トンボの世界</h4>
-                            <p>20数種類のトンボが飛び交い、夏から秋にかけて観察を楽しめます。</p>
+                            <h4 data-i18n="nature.dragonfly.title">🦋 トンボの世界</h4>
+                            <p data-i18n="nature.dragonfly.desc">20数種類のトンボが飛び交い、夏から秋にかけて観察を楽しめます。</p>
                         </div>
 
                         <div class="nature-item">
-                            <h4>🦋 アサギマダラ</h4>
-                            <p>台湾から飛んでくる珍しい蝶です。黒い体に白い斑点と青い模様が特徴的で、5月中旬から6月上旬ぐらいに飛来します。</p>
+                            <h4 data-i18n="nature.butterfly.title">🦋 アサギマダラ</h4>
+                            <p data-i18n="nature.butterfly.desc">台湾から飛んでくる珍しい蝶です。黒い体に白い斑点と青い模様が特徴的で、5月中旬から6月上旬ぐらいに飛来します。</p>
                         </div>
 
                         <div class="nature-item">
-                            <h4>🌳 絶滅危惧種のオオバネムの木</h4>
-                            <p>環境省レッドリストに掲載されているオオバネムの木が見られます。貴重な自然遺産です。</p>
+                            <h4 data-i18n="nature.tree.title">🌳 絶滅危惧種のオオバネムの木</h4>
+                            <p data-i18n="nature.tree.desc">環境省レッドリストに掲載されているオオバネムの木が見られます。貴重な自然遺産です。</p>
                         </div>
 
                         <div class="nature-item">
-                            <h4>🌱 植物観察</h4>
-                            <p>季節ごとに様々な植物が見られます。植物観察ガイドもおすすめです。</p>
+                            <h4 data-i18n="nature.plants.title">🌱 植物観察</h4>
+                            <p data-i18n="nature.plants.desc">季節ごとに様々な植物が見られます。植物観察ガイドもおすすめです。</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="nature-highlight">
                     <div class="highlight-card">
-                        <h4>🌿 絶滅危惧種</h4>
-                        <p>オオバネムの木</p>
-                        <small>環境省レッドリスト掲載種</small>
+                        <h4 data-i18n="nature.h1.title">🌿 絶滅危惧種</h4>
+                        <p data-i18n="nature.h1.text">オオバネムの木</p>
+                        <small data-i18n="nature.h1.sub">環境省レッドリスト掲載種</small>
                     </div>
                     <div class="highlight-card">
-                        <h4>🦋 アサギマダラ</h4>
-                        <p>台湾から渡来</p>
-                        <small>5月中旬〜6月上旬に観察</small>
+                        <h4 data-i18n="nature.h2.title">🦋 アサギマダラ</h4>
+                        <p data-i18n="nature.h2.text">台湾から渡来</p>
+                        <small data-i18n="nature.h2.sub">5月中旬〜6月上旬に観察</small>
                     </div>
                     <div class="highlight-card">
-                        <h4>🐦 野鳥</h4>
-                        <p>20数種類</p>
-                        <small>通年観察可能</small>
+                        <h4 data-i18n="nature.h3.title">🐦 野鳥</h4>
+                        <p data-i18n="nature.h3.text">20数種類</p>
+                        <small data-i18n="nature.h3.sub">通年観察可能</small>
                     </div>
                     <div class="highlight-card">
-                        <h4>🦋 トンボ</h4>
-                        <p>20数種類</p>
-                        <small>夏〜秋にピーク</small>
+                        <h4 data-i18n="nature.h4.title">🦋 トンボ</h4>
+                        <p data-i18n="nature.h4.text">20数種類</p>
+                        <small data-i18n="nature.h4.sub">夏〜秋にピーク</small>
                     </div>
                 </div>
             </div>
@@ -445,56 +488,56 @@
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
-            <h2 class="section-title">ギャラリー</h2>
-            <p class="section-subtitle">Gallery</p>
+            <h2 class="section-title" data-i18n="gallery.title">ギャラリー</h2>
+            <p class="section-subtitle" data-i18n="gallery.subtitle">Gallery</p>
 
             <div class="gallery-grid">
                 <div class="gallery-item" data-category="hydrangea">
-                    <img src="images/S__16891942_0.jpg" alt="アジサイの花の海">
+                    <img src="images/S__16891942_0.jpg" alt="アジサイの花の海" data-i18n-alt="gallery.alt1">
                 </div>
                 <div class="gallery-item" data-category="hydrangea">
-                    <img src="images/S__16891937_0.jpg" alt="色とりどりのアジサイ">
+                    <img src="images/S__16891937_0.jpg" alt="色とりどりのアジサイ" data-i18n-alt="gallery.alt2">
                 </div>
                 <div class="gallery-item" data-category="hydrangea">
-                    <img src="images/S__16891938_0.jpg" alt="200万本のアジサイ庭園">
+                    <img src="images/S__16891938_0.jpg" alt="200万本のアジサイ庭園" data-i18n-alt="gallery.alt3">
                 </div>
                 <div class="gallery-item" data-category="ocean">
-                    <img src="images/S__16891939_0.jpg" alt="海とアジサイの絶景">
+                    <img src="images/S__16891939_0.jpg" alt="海とアジサイの絶景" data-i18n-alt="gallery.alt4">
                 </div>
                 <div class="gallery-item" data-category="cherry">
-                    <img src="images/S__16891940_0.jpg" alt="春の桜並木">
+                    <img src="images/S__16891940_0.jpg" alt="春の桜並木" data-i18n-alt="gallery.alt5">
                 </div>
                 <div class="gallery-item" data-category="nature">
-                    <img src="images/S__16891941_0.jpg" alt="オオバネムの木">
+                    <img src="images/S__16891941_0.jpg" alt="オオバネムの木" data-i18n-alt="gallery.alt6">
                 </div>
                 <div class="gallery-item" data-category="hydrangea">
-                    <img src="images/S__16891948_0.jpg" alt="アジサイの美しさ">
+                    <img src="images/S__16891948_0.jpg" alt="アジサイの美しさ" data-i18n-alt="gallery.alt7">
                 </div>
                 <div class="gallery-item" data-category="nature">
-                    <img src="images/S__16891950_0.jpg" alt="桃源郷岬の自然">
+                    <img src="images/S__16891950_0.jpg" alt="桃源郷岬の自然" data-i18n-alt="gallery.alt8">
                 </div>
                 <div class="gallery-item" data-category="ocean">
-                    <img src="images/S__16891952_0.jpg" alt="海風に揺れるアジサイ">
+                    <img src="images/S__16891952_0.jpg" alt="海風に揺れるアジサイ" data-i18n-alt="gallery.alt9">
                 </div>
                 <div class="gallery-item" data-category="hydrangea">
-                    <img src="images/S__16891953_0.jpg" alt="アジサイの花びら">
+                    <img src="images/S__16891953_0.jpg" alt="アジサイの花びら" data-i18n-alt="gallery.alt10">
                 </div>
                 <div class="gallery-item" data-category="ocean">
-                    <img src="images/S__16891956_0.jpg" alt="太平洋を望む庭園">
+                    <img src="images/S__16891956_0.jpg" alt="太平洋を望む庭園" data-i18n-alt="gallery.alt11">
                 </div>
                 <div class="gallery-item" data-category="ocean">
-                    <img src="images/kame.png" alt="亀岩の絶景">
+                    <img src="images/kame.png" alt="亀岩の絶景" data-i18n-alt="gallery.alt12">
                 </div>
                 <div class="gallery-item" data-category="ocean">
-                    <img src="images/kame2.jpg" alt="亀岩の奇観">
+                    <img src="images/kame2.jpg" alt="亀岩の奇観" data-i18n-alt="gallery.alt13">
                 </div>
                 <div class="gallery-item" data-category="hydrangea">
-                    <img src="images/ajisai.png" alt="色鮮やかなアジサイ">
+                    <img src="images/ajisai.png" alt="色鮮やかなアジサイ" data-i18n-alt="gallery.alt14">
                 </div>
             </div>
 
             <div class="gallery-show-more">
-                <button id="gallery-show-more-btn" class="btn btn-secondary">
+                <button id="gallery-show-more-btn" class="btn btn-secondary" data-i18n="gallery.showMore">
                     全ての写真を見る（15枚） &darr;
                 </button>
             </div>
@@ -504,98 +547,98 @@
     <!-- Access Section -->
     <section id="access" class="access">
         <div class="container">
-            <h2 class="section-title">アクセス・営業情報</h2>
-            <p class="section-subtitle">Access & Information</p>
+            <h2 class="section-title" data-i18n="access.title">アクセス・営業情報</h2>
+            <p class="section-subtitle" data-i18n="access.subtitle">Access & Information</p>
 
             <div class="access-content" id="info">
                 <div class="access-info">
                     <div class="info-card">
-                        <h3>📍 所在地</h3>
-                        <p>〒889-0602</p>
-                        <a href="https://www.google.com/maps/search/?api=1&query=宮崎県東臼杵郡門川町庵川+桃源郷岬" target="_blank" rel="noopener noreferrer" class="map-link">
+                        <h3 data-i18n="access.location.title">📍 所在地</h3>
+                        <p data-i18n="access.location.zip">〒889-0602</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=宮崎県東臼杵郡門川町庵川+桃源郷岬" target="_blank" rel="noopener noreferrer" class="map-link" data-i18n="access.location.address">
                             🗺️ 宮崎県東臼杵郡門川町庵川（桃源郷岬）
                         </a>
                     </div>
 
                     <div class="info-card">
-                        <h3>🕐 営業時間</h3>
-                        <p>8:00〜17:00</p>
-                        <p>※季節により変更の場合あり</p>
+                        <h3 data-i18n="access.hours.title">🕐 営業時間</h3>
+                        <p data-i18n="access.hours.time">8:00〜17:00</p>
+                        <p data-i18n="access.hours.note">※季節により変更の場合あり</p>
                     </div>
 
                     <div class="info-card">
-                        <h3>📅 休園日</h3>
-                        <p>期間中は無休</p>
-                        <p>※アジサイ見頃時期（6月〜7月）</p>
+                        <h3 data-i18n="access.closed.title">📅 休園日</h3>
+                        <p data-i18n="access.closed.period">期間中は無休</p>
+                        <p data-i18n="access.closed.note">※アジサイ見頃時期（6月〜7月）</p>
                     </div>
 
                     <div class="info-card">
-                        <h3>💰 入園料</h3>
-                        <p><strong>【アジサイ見頃期間】6月1日〜6月15日</strong></p>
-                        <p>大人: 1000円 / 小中学生: 300円</p>
-                        <p><strong>【その他の期間】</strong></p>
-                        <p>大人: 700円 / 小中学生: 300円</p>
-                        <p>幼児: 無料</p>
+                        <h3 data-i18n="access.price.title">💰 入園料</h3>
+                        <p><strong data-i18n="access.price.peakLabel">【アジサイ見頃期間】6月1日〜6月15日</strong></p>
+                        <p data-i18n="access.price.peak">大人: 1000円 / 小中学生: 300円</p>
+                        <p><strong data-i18n="access.price.normalLabel">【その他の期間】</strong></p>
+                        <p data-i18n="access.price.normal">大人: 700円 / 小中学生: 300円</p>
+                        <p data-i18n="access.price.child">幼児: 無料</p>
                     </div>
                 </div>
             </div>
 
             <!-- Detailed Directions -->
             <div class="directions">
-                <h3 class="directions-title">🗺️ 詳しい行き方</h3>
+                <h3 class="directions-title" data-i18n="access.directions.title">🗺️ 詳しい行き方</h3>
 
                 <!-- By Car -->
                 <div class="direction-block">
-                    <h4 class="direction-method">🚗 お車でお越しの方</h4>
+                    <h4 class="direction-method" data-i18n="access.car.title">🚗 お車でお越しの方</h4>
 
                     <div class="direction-route">
-                        <h5>宮崎市内から - 高速道路（約1時間）</h5>
+                        <h5 data-i18n="access.fromMiyazaki.title">宮崎市内から - 高速道路（約1時間）</h5>
 
-                        <p><strong>高速道路：</strong></p>
-                        <p>宮崎市内から東九州自動車道を北（延岡方面）へ進みます。</p>
-                        <p>日向ICで高速道路を降ります。</p>
+                        <p><strong data-i18n="access.fromMiyazaki.highwayLabel">高速道路：</strong></p>
+                        <p data-i18n="access.fromMiyazaki.highway">宮崎市内から東九州自動車道を北（延岡方面）へ進みます。</p>
+                        <p data-i18n="access.fromMiyazaki.ic">日向ICで高速道路を降ります。</p>
 
-                        <p><strong>一般道：日向IC出口から（約20分）</strong></p>
+                        <p><strong data-i18n="access.fromMiyazaki.localLabel">一般道：日向IC出口から（約20分）</strong></p>
                         <ol>
-                            <li>日向ICを降りて国道10号線を北（門川方面）へ進みます</li>
-                            <li>国道10号線を直進すると、「桃源郷岬」の看板が見えますので、そこを右折します</li>
-                            <li>約2km進むと到着です</li>
+                            <li data-i18n="access.fromMiyazaki.step1">日向ICを降りて国道10号線を北（門川方面）へ進みます</li>
+                            <li data-i18n="access.fromMiyazaki.step2">国道10号線を直進すると、「桃源郷岬」の看板が見えますので、そこを右折します</li>
+                            <li data-i18n="access.fromMiyazaki.step3">約2km進むと到着です</li>
                         </ol>
 
-                        <p class="direction-note">⚠️ 庭園は岬の上に位置します。坂道がありますのでご注意ください。</p>
+                        <p class="direction-note" data-i18n="access.fromMiyazaki.note">⚠️ 庭園は岬の上に位置します。坂道がありますのでご注意ください。</p>
                     </div>
 
                     <div class="direction-route">
-                        <h5>延岡市から（約30分）</h5>
+                        <h5 data-i18n="access.fromNobeoka.title">延岡市から（約30分）</h5>
                         <ol>
-                            <li>延岡ICから国道10号線を南へ（宮崎方面へ）</li>
-                            <li>約25km直進し、門川町に入ります</li>
-                            <li>門川交差点を過ぎて最初の信号で右折</li>
-                            <li>県道226号線へ入り、約7km直進</li>
-                            <li>「桃源郷岬」の看板が見えたら右折</li>
-                            <li>約2km進むと到着です</li>
+                            <li data-i18n="access.fromNobeoka.step1">延岡ICから国道10号線を南へ（宮崎方面へ）</li>
+                            <li data-i18n="access.fromNobeoka.step2">約25km直進し、門川町に入ります</li>
+                            <li data-i18n="access.fromNobeoka.step3">門川交差点を過ぎて最初の信号で右折</li>
+                            <li data-i18n="access.fromNobeoka.step4">県道226号線へ入り、約7km直進</li>
+                            <li data-i18n="access.fromNobeoka.step5">「桃源郷岬」の看板が見えたら右折</li>
+                            <li data-i18n="access.fromNobeoka.step6">約2km進むと到着です</li>
                         </ol>
                     </div>
 
                     <div class="direction-route">
-                        <h5>大分市から（約1時間30分）</h5>
+                        <h5 data-i18n="access.fromOita.title">大分市から（約1時間30分）</h5>
                         <ol>
-                            <li>大分ICから東九州自動車道へ</li>
-                            <li>門川ICで降りる</li>
-                            <li>県道226号線へ入り、海沿いに約6〜7km直進（南へ）</li>
-                            <li>「桃源郷岬」の看板が見えたら左折（海側・岬方面へ）</li>
-                            <li>約2km進むと到着です</li>
+                            <li data-i18n="access.fromOita.step1">大分ICから東九州自動車道へ</li>
+                            <li data-i18n="access.fromOita.step2">門川ICで降りる</li>
+                            <li data-i18n="access.fromOita.step3">県道226号線へ入り、海沿いに約6〜7km直進（南へ）</li>
+                            <li data-i18n="access.fromOita.step4">「桃源郷岬」の看板が見えたら左折（海側・岬方面へ）</li>
+                            <li data-i18n="access.fromOita.step5">約2km進むと到着です</li>
                         </ol>
                     </div>
 
                     <div class="parking-info">
-                        <h5>🅿️ 駐車場</h5>
-                        <p>園内に駐車場がございます（無料）</p>
+                        <h5 data-i18n="access.parking.title">🅿️ 駐車場</h5>
+                        <p data-i18n="access.parking.free">園内に駐車場がございます（無料）</p>
                         <ul>
-                            <li>収容台数：約150台</li>
-                            <li>普通車：大型バスも駐車可能</li>
-                            <li>アジサイ見頃時期は混雑します</li>
-                            <li>早めのお出かけをお勧めします</li>
+                            <li data-i18n="access.parking.item1">収容台数：約150台</li>
+                            <li data-i18n="access.parking.item2">普通車：大型バスも駐車可能</li>
+                            <li data-i18n="access.parking.item3">アジサイ見頃時期は混雑します</li>
+                            <li data-i18n="access.parking.item4">早めのお出かけをお勧めします</li>
                         </ul>
                     </div>
                 </div>
@@ -609,28 +652,28 @@
     <!-- Tips Section -->
     <section class="tips">
         <div class="container">
-            <h2 class="section-title">おすすめポイント</h2>
-            <p class="section-subtitle">Tips & Recommendations</p>
+            <h2 class="section-title" data-i18n="tips.title">おすすめポイント</h2>
+            <p class="section-subtitle" data-i18n="tips.subtitle">Tips & Recommendations</p>
 
             <div class="tips-grid">
                 <div class="tip-card">
-                    <h4>📸 写真好き必見</h4>
-                    <p>海とアジサイのコラボレーションは絶景。朝夕の光が綺麗な時間帯がおすすめです。</p>
+                    <h4 data-i18n="tips.photo.title">📸 写真好き必見</h4>
+                    <p data-i18n="tips.photo.desc">海とアジサイのコラボレーションは絶景。朝夕の光が綺麗な時間帯がおすすめです。</p>
                 </div>
 
                 <div class="tip-card">
-                    <h4>🌦️ 梅雨の楽しみ方</h4>
-                    <p>曇りや小雨の日も、アジサイの青が際立ちます。雨具を持って散策してみてください。</p>
+                    <h4 data-i18n="tips.rain.title">🌦️ 梅雨の楽しみ方</h4>
+                    <p data-i18n="tips.rain.desc">曇りや小雨の日も、アジサイの青が際立ちます。雨具を持って散策してみてください。</p>
                 </div>
 
                 <div class="tip-card">
-                    <h4>👟 歩きやすい服装</h4>
-                    <p>20万平方メートルと広い園内です。歩きやすい靴で、時間をかけて楽しんでください。</p>
+                    <h4 data-i18n="tips.shoes.title">👟 歩きやすい服装</h4>
+                    <p data-i18n="tips.shoes.desc">20万平方メートルと広い園内です。歩きやすい靴で、時間をかけて楽しんでください。</p>
                 </div>
 
                 <div class="tip-card">
-                    <h4>🔭 虫眼鏡持参</h4>
-                    <p>トンボや野鳥観察には虫眼鏡や双眼鏡があるとより楽しめます。</p>
+                    <h4 data-i18n="tips.magnifier.title">🔭 虫眼鏡持参</h4>
+                    <p data-i18n="tips.magnifier.desc">トンボや野鳥観察には虫眼鏡や双眼鏡があるとより楽しめます。</p>
                 </div>
             </div>
         </div>
@@ -641,14 +684,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h4>桃源郷岬</h4>
-                    <p>Togenkyo Cape</p>
-                    <p>宮崎県東臼杵郡門川町庵川</p>
-                    <p class="footer-tagline">200万本のアジサイが咲く、天空の庭園</p>
+                    <h4 data-i18n="footer.brand">桃源郷岬</h4>
+                    <p data-i18n="footer.brandSub">Togenkyo Cape</p>
+                    <p data-i18n="footer.address">宮崎県東臼杵郡門川町庵川</p>
+                    <p class="footer-tagline" data-i18n="footer.tagline">200万本のアジサイが咲く、天空の庭園</p>
                 </div>
 
                 <div class="footer-social">
-                    <h4>SNS</h4>
+                    <h4 data-i18n="footer.sns">SNS</h4>
                     <a href="https://www.instagram.com/tougenkyomisaki/" target="_blank" rel="noopener noreferrer" class="social-link instagram-link">
                         <span class="social-icon">📸</span>
                         <span class="social-text">Instagram</span>
@@ -656,31 +699,32 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>リンク</h4>
+                    <h4 data-i18n="footer.links">リンク</h4>
                     <ul>
-                        <li><a href="#home">ホーム</a></li>
-                        <li><a href="#features">桃源郷の魅力</a></li>
-                        <li><a href="#seasons">四季の花</a></li>
-                        <li><a href="#nature">自然観察</a></li>
-                        <li><a href="#latest">最新情報</a></li>
-                        <li><a href="#gallery">ギャラリー</a></li>
-                        <li><a href="#access">アクセス</a></li>
-                        <li><a href="#info">営業情報</a></li>
+                        <li><a href="#home" data-i18n="nav.home">ホーム</a></li>
+                        <li><a href="#features" data-i18n="nav.features">桃源郷の魅力</a></li>
+                        <li><a href="#seasons" data-i18n="nav.seasons">四季の花</a></li>
+                        <li><a href="#nature" data-i18n="nav.nature">自然観察</a></li>
+                        <li><a href="#latest" data-i18n="nav.latest">最新情報</a></li>
+                        <li><a href="#gallery" data-i18n="nav.gallery">ギャラリー</a></li>
+                        <li><a href="#access" data-i18n="nav.access">アクセス</a></li>
+                        <li><a href="#info" data-i18n="nav.info">営業情報</a></li>
                     </ul>
                 </div>
                 <div class="footer-info">
-                    <h4>営業情報</h4>
-                    <p>営業時間: 8:00〜17:00</p>
-                    <p>休園日: 期間中は無休</p>
-                    <p>所在地: <a href="https://www.google.com/maps/search/?api=1&query=宮崎県東臼杵郡門川町庵川+桃源郷岬" target="_blank" rel="noopener noreferrer" class="map-link">〒889-0602 宮崎県東臼杵郡門川町庵川</a></p>
+                    <h4 data-i18n="footer.info">営業情報</h4>
+                    <p data-i18n="footer.hours">営業時間: 8:00〜17:00</p>
+                    <p data-i18n="footer.closed">休園日: 期間中は無休</p>
+                    <p>所在地: <a href="https://www.google.com/maps/search/?api=1&query=宮崎県東臼杵郡門川町庵川+桃源郷岬" target="_blank" rel="noopener noreferrer" class="map-link" data-i18n="access.location.zip">〒889-0602 宮崎県東臼杵郡門川町庵川</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 桃源郷岬. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 桃源郷岬. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

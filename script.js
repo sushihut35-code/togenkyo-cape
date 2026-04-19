@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
+    initI18n();
     initHeader();
     initNavigation();
     initSmoothScroll();

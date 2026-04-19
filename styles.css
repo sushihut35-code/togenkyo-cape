@@ -1465,6 +1465,60 @@ footer {
 /* ===================================
    Responsive Design
    =================================== */
+/* ===================================
+   Language Switcher
+   =================================== */
+.lang-switcher {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.lang-btn {
+    padding: 4px 10px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: var(--font-sans);
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.lang-btn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 968px) {
+    .lang-switcher {
+        order: 3;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        background: var(--white);
+        padding: 8px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .lang-btn {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
 @media (max-width: 968px) {
     :root {
         --header-height: 60px;
