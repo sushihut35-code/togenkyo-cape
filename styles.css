@@ -480,6 +480,23 @@ section {
     transform: scale(1.05);
 }
 
+/* 画像全体を見せる（カード4：tori画像） */
+.feature-card:has(img[src*="tori.jpg"]) .feature-image {
+    height: auto;
+    min-height: 200px;
+    background: #f5f5f5;
+}
+
+.feature-card:has(img[src*="tori.jpg"]) .feature-image img {
+    object-fit: contain;
+    height: auto;
+    max-height: 300px;
+}
+
+.feature-card:has(img[src*="tori.jpg"]) .feature-image:hover img {
+    transform: none;
+}
+
 .feature-card h3 {
     color: var(--primary);
     font-size: 1.3rem;
