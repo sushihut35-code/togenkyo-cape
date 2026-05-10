@@ -219,6 +219,7 @@ const translations = {
     'features.alt1': '日本最大級のアジサイ園',
     'features.alt2': '絶景のロケーション',
     'features.alt3': '四季を通じて楽しめる',
+    'features.alt4': '世界でここだけ3000羽の奇跡',
     'features.alt6': '亀岩の奇観',
     'features.alt7': '2000kmを旅する、幸運の使者',
 
@@ -426,6 +427,7 @@ const translations = {
     'features.alt1': 'One of Japan\'s largest hydrangea gardens',
     'features.alt2': 'Spectacular ocean view location',
     'features.alt3': 'Beautiful in every season',
+    'features.alt4': 'A miracle of 3,000 birds found nowhere else',
     'features.alt6': 'Mysterious Turtle Rock',
     'features.alt7': 'Chestnut Tiger butterfly - the lucky traveler',
 
@@ -632,6 +634,7 @@ const translations = {
     'features.alt1': '日本最大规模的绣球花园',
     'features.alt2': '绝美海景',
     'features.alt3': '四季皆美',
+    'features.alt4': '世界上独一无二的3000只奇迹',
     'features.alt6': '龟岩奇观',
     'features.alt7': '幸运的使者大绢斑蝶',
 
@@ -838,6 +841,7 @@ const translations = {
     'features.alt1': '일본 최대급 수국원',
     'features.alt2': '절경의 로케이션',
     'features.alt3': '사계절 아름다움',
+    'features.alt4': '세계에서 여기뿐인 3000마리의 기적',
     'features.alt6': '거북바위 기관',
     'features.alt7': '행운의 사자 큰줄무늬나비',
 
