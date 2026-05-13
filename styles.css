@@ -1036,6 +1036,13 @@ section {
     border-radius: 4px;
     font-size: 0.95rem;
     line-height: 1.8;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.access-notice-content {
+    flex: 1;
 }
 
 .access-notice strong {
@@ -1046,11 +1053,11 @@ section {
 }
 
 .access-notice-image {
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
-    margin-top: var(--spacing-md);
     border-radius: 8px;
     display: block;
+    flex-shrink: 0;
 }
 
 .access-content {
@@ -1720,6 +1727,14 @@ footer {
 }
 
 @media (max-width: 640px) {
+    .access-notice {
+        flex-direction: column;
+    }
+
+    .access-notice-image {
+        max-width: 100%;
+    }
+
     .lightbox-content {
         max-width: 95%;
     }
