@@ -1045,6 +1045,14 @@ section {
     font-size: 1.05rem;
 }
 
+.access-notice-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: var(--spacing-md);
+    border-radius: 8px;
+    display: block;
+}
+
 .access-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
