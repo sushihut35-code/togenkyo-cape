@@ -123,7 +123,8 @@ const translations = {
     // Access
     'access.title': 'アクセス・営業情報',
     'access.subtitle': 'Access & Information',
-    'access.notice': '<strong>アクセスについて</strong><br>近年、周辺道路の舗装・整備が進み、以前よりも快適にご来場いただけるようになりました。<br>普通車でも安心して通行しやすい道路環境になっています。<br><br>安全運転で、景色を楽しみながらお越しください。',
+    'access.notice.title': 'アクセスについて',
+    'access.notice.text': '近年、周辺道路の舗装・整備が進み、以前よりも快適にご来場いただけるようになりました。<br>普通車でも安心して通行しやすい道路環境になっています。<br><br>安全運転で、景色を楽しみながらお越しください。',
     'access.location.title': '📍 所在地',
     'access.location.zip': '〒889-0602',
     'access.location.address': '🗺️ 宮崎県東臼杵郡門川町庵川（桃源郷岬）',
@@ -338,7 +339,8 @@ const translations = {
 
     'access.title': 'Access & Information',
     'access.subtitle': 'Access & Information',
-    'access.notice': '<strong>About Access</strong><br>In recent years, the surrounding roads have been paved and improved, making it more comfortable to visit than before.<br>The road environment is now safe for regular cars.<br><br>Please drive safely and enjoy the scenery on your way.',
+    'access.notice.title': 'About Access',
+    'access.notice.text': 'In recent years, the surrounding roads have been paved and improved, making it more comfortable to visit than before.<br>The road environment is now safe for regular cars.<br><br>Please drive safely and enjoy the scenery on your way.',
     'access.location.title': '📍 Location',
     'access.location.zip': '〒889-0602',
     'access.location.address': '🗺️ Anagawa, Kadogawa Town, Higashi-Usuki District, Miyazaki Prefecture',
@@ -546,7 +548,8 @@ const translations = {
 
     'access.title': '交通指南·营业信息',
     'access.subtitle': 'Access & Information',
-    'access.notice': '<strong>关于交通</strong><br>近年来，周边道路的铺设和整备工作不断推进，现在比以往更加舒适便捷。<br>道路环境已改善，普通车辆也可以放心通行。<br><br>请安全驾驶，在享受沿途风景的同时前来游玩。',
+    'access.notice.title': '关于交通',
+    'access.notice.text': '近年来，周边道路的铺设和整备工作不断推进，现在比以往更加舒适便捷。<br>道路环境已改善，普通车辆也可以放心通行。<br><br>请安全驾驶，在享受沿途风景的同时前来游玩。',
     'access.location.title': '📍 地址',
     'access.location.zip': '〒889-0602',
     'access.location.address': '🗺️ 宫崎县东臼杵郡门川町庵川（桃源乡岬）',
@@ -754,7 +757,8 @@ const translations = {
 
     'access.title': '오시는 길·운영 안내',
     'access.subtitle': 'Access & Information',
-    'access.notice': '<strong>오시는 길에 대해</strong><br>최근 주변 도로의 포장 및 정비가 진행되어, 예전보다 더욱 쾌적하게 방문하실 수 있게 되었습니다.<br>일반 승용차도 안심하고 통행할 수 있는 도로 환경입니다.<br><br>안전 운전으로 경치를 즐기시며 방문해 주세요.',
+    'access.notice.title': '오시는 길에 대해',
+    'access.notice.text': '최근 주변 도로의 포장 및 정비가 진행되어, 예전보다 더욱 쾌적하게 방문하실 수 있게 되었습니다.<br>일반 승용차도 안심하고 통행할 수 있는 도로 환경입니다.<br><br>안전 운전으로 경치를 즐기시며 방문해 주세요.',
     'access.location.title': '📍 위치',
     'access.location.zip': '〒889-0602',
     'access.location.address': '🗺️ 미야자키현 히가시우스키군 카도가와초 아나가와 (도겐쿄 곶)',
