@@ -1028,6 +1028,23 @@ section {
     background: var(--white);
 }
 
+.access-notice {
+    background: #f0f7ff;
+    border-left: 4px solid var(--primary);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.access-notice strong {
+    color: var(--primary);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.05rem;
+}
+
 .access-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
