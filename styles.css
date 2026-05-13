@@ -1048,8 +1048,8 @@ section {
 }
 
 .faq-question {
-    background: var(--primary-light);
-    color: var(--primary);
+    background: var(--primary);
+    color: var(--white);
     padding: var(--spacing-md) var(--spacing-lg);
     font-weight: 600;
     font-size: 1.05rem;
