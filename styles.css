@@ -1022,6 +1022,48 @@ section {
 }
 
 /* ===================================
+   FAQ Section
+   =================================== */
+.faq {
+    background: var(--off-white);
+    padding: var(--spacing-xxl) 0;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 10px;
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-answer {
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/* ===================================
    Access Section
    =================================== */
 .access {
