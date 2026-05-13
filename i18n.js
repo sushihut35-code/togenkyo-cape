@@ -192,8 +192,8 @@ const translations = {
     // FAQ
     'faq.title': 'よくある質問',
     'faq.subtitle': 'Frequently Asked Questions',
-    'faq.placeholder.question': 'Q.',
-    'faq.placeholder.answer': '準備中...',
+    'faq.q1.question': 'Q. 道は狭いですか？',
+    'faq.q1.answer': '以前は狭く感じる区間もありましたが、近年、周辺道路の舗装・整備が進み、以前よりも快適にご来場いただけるようになりました。<br>現在、道は全て舗装されており、普通車でも安心して通行しやすい道路環境になっています。<br><br>安全運転で、景色を楽しみながらお越しください。',
 
     // Footer
     'footer.brand': '桃源郷岬',
@@ -411,8 +411,8 @@ const translations = {
     // FAQ
     'faq.title': 'Frequently Asked Questions',
     'faq.subtitle': 'Frequently Asked Questions',
-    'faq.placeholder.question': 'Q.',
-    'faq.placeholder.answer': 'Coming soon...',
+    'faq.q1.question': 'Q. Are the roads narrow?',
+    'faq.q1.answer': 'Some sections used to feel narrow, but in recent years the surrounding roads have been paved and improved, making it more comfortable to visit than before.<br>All roads are now fully paved, providing a safe environment for regular cars.<br><br>Please drive safely and enjoy the scenery on your way.',
 
     'footer.brand': 'Togenkyo Cape',
     'footer.brandSub': '桃源郷岬',
@@ -626,8 +626,8 @@ const translations = {
     // FAQ
     'faq.title': '常见问题',
     'faq.subtitle': 'Frequently Asked Questions',
-    'faq.placeholder.question': 'Q.',
-    'faq.placeholder.answer': '准备中...',
+    'faq.q1.question': 'Q. 道路狭窄吗？',
+    'faq.q1.answer': '以前有些路段感觉比较狭窄，但近年来，周边道路的铺设和整备工作不断推进，现在比以往更加舒适便捷。<br>目前道路已全面铺设，普通车辆也可以放心通行。<br><br>请安全驾驶，在享受沿途风景的同时前来游玩。',
 
     'footer.brand': '桃源乡岬',
     'footer.brandSub': 'Togenkyo Cape',
@@ -841,8 +841,8 @@ const translations = {
     // FAQ
     'faq.title': '자주 묻는 질문',
     'faq.subtitle': 'Frequently Asked Questions',
-    'faq.placeholder.question': 'Q.',
-    'faq.placeholder.answer': '준비 중...',
+    'faq.q1.question': 'Q. 도로가 좁나요?',
+    'faq.q1.answer': '예전에는 좁게 느껴지는 구간도 있었지만, 최근 주변 도로의 포장 및 정비가 진행되어, 예전보다 더욱 쾌적하게 방문하실 수 있게 되었습니다.<br>현재 모든 도로가 전면 포장되어 있어 일반 승용차도 안심하고 통행할 수 있습니다.<br><br>안전 운전으로 경치를 즐기시며 방문해 주세요.',
 
     'footer.brand': '도겐쿄 곶',
     'footer.brandSub': 'Togenkyo Cape',
