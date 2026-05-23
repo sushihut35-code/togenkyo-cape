@@ -1134,9 +1134,10 @@ section {
 }
 
 .video-caption {
-    margin-top: var(--spacing-xs);
-    font-size: 0.9rem;
-    color: var(--gray);
+    margin-top: var(--spacing-sm);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
 }
 
 .access-content {
