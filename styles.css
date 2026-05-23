@@ -1102,6 +1102,31 @@ section {
     flex-shrink: 0;
 }
 
+.access-videos {
+    margin-bottom: var(--spacing-xl);
+}
+
+.access-videos h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-container video {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .access-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1775,6 +1800,10 @@ footer {
 
     .access-notice-image {
         max-width: 100%;
+    }
+
+    .video-container video {
+        width: 100%;
     }
 
     .lightbox-content {
