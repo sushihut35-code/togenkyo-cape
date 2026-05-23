@@ -1120,13 +1120,23 @@ section {
     flex-wrap: wrap;
 }
 
-.video-container video {
+.video-item {
+    text-align: center;
+}
+
+.video-item video {
     max-width: 100%;
-    width: 300px;
-    max-height: 400px;
+    width: 220px;
+    max-height: 300px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     object-fit: contain;
+}
+
+.video-caption {
+    margin-top: var(--spacing-xs);
+    font-size: 0.9rem;
+    color: var(--gray);
 }
 
 .access-content {
